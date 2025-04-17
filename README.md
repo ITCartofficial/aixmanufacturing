@@ -4,12 +4,11 @@ Aix Manufacturing Dashboard is a modern, AI-powered web application designed to 
 
 ## 🚀 Tech Stack
 
-- ⚛️ React (with TypeScript)
+- ⚛️ React
 - ⚡ Vite
 - 💨 Tailwind CSS
-- 🧠 Zustand (or Redux)
 - 📊 Chart.js / Recharts (for graphs)
-- 🎯 Lucide Icons / ShadCN UI (for modern UI components)
+- 🎯 React Icons / TailwindCSS (for modern UI components)
 
 ## 📁 Project Structure
 
