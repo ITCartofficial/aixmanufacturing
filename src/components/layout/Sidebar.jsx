@@ -1,4 +1,5 @@
 import { MdSpaceDashboard } from "react-icons/md";
+import { FaIndustry } from "react-icons/fa6";
 
 const Sidebar = () => {
   return (
@@ -9,7 +10,7 @@ const Sidebar = () => {
           <span className="text-[16px] font-semibold">Dashboard</span>
         </li>
         <li className="text-[16px] flex items-center font-semibold text-[#4B4B4B] cursor-pointer hover:text-[#ffffff] hover:bg-[#5D60EF] py-4 px-3 rounded-[10px]">
-          <MdSpaceDashboard className="text-[20px] mr-2" />
+          <FaIndustry className="text-[20px] mr-2" />
           <span className="text-[16px] font-semibold">Plants</span>
         </li>
         <li className="text-[16px] flex items-center font-semibold text-[#4B4B4B] cursor-pointer hover:text-[#ffffff] hover:bg-[#5D60EF] py-4 px-3 rounded-[10px]">
@@ -39,6 +40,10 @@ const Sidebar = () => {
         <li className="text-[16px] flex items-center font-semibold text-[#4B4B4B] cursor-pointer hover:text-[#ffffff] hover:bg-[#5D60EF] py-4 px-3 rounded-[10px]">
           <MdSpaceDashboard className="text-[20px] mr-2" />
           <span className="text-[16px] font-semibold">Access</span>
+        </li>
+        <li className="text-[16px] flex items-center font-semibold text-[#4B4B4B] cursor-pointer hover:text-[#ffffff] hover:bg-[#5D60EF] py-4 px-3 rounded-[10px]">
+          <MdSpaceDashboard className="text-[20px] mr-2" />
+          <span className="text-[16px] font-semibold">Setting</span>
         </li>
       </ul>
     </div>

@@ -1,10 +1,5 @@
-import MainLayout from "./components/MainLayout";
-import { FaRegBell } from "react-icons/fa";
+import Dashboard from "./pages/Dashboard";
 
 export default function App() {
-  return (
-    <MainLayout>
-      <h1 className="text-3xl font-bold text-black">Main</h1>
-    </MainLayout>
-  );
+  return <Dashboard />;
 }
