@@ -1,4 +1,4 @@
-import MainLayout from "./layouts/MainLayout";
+import MainLayout from "./components/MainLayout";
 import { FaRegBell } from "react-icons/fa";
 
 export default function App() {
