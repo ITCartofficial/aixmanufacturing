@@ -3,7 +3,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 
 const Header = () => {
   return (
-    <div className="w-full bg-[#FFFFFF] flex justify-between items-center px-4 py-2 shadow-sm">
+    <div className="w-full bg-[#FFFFFF] flex justify-between items-center px-4 shadow-sm h-[60px]">
       <div className="flex items-center gap-4">
         <RxHamburgerMenu className="text-[24px] text-gray-700" />
         <h1 className="text-[20px] font-semibold text-black">
