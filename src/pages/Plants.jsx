@@ -7,6 +7,7 @@ import FinanceIcon from "../assets/icons/finance.png";
 import GearIcon from "../assets/icons/gear.png";
 import SettingsIcon from "../assets/icons/settings.png";
 import Dropdown from "../components/common/Dropdown";
+import MainLayout from "../components/MainLayout";
 
 const Plants = () => {
   const stats = [
@@ -31,7 +32,8 @@ const Plants = () => {
   };
 
   return (
-    <div>
+    <MainLayout>
+      <div>
       <TitleBar />
       <div className="mt-6 px-4 py-6 sm:px-6 bg-white shadow border">
         <div className="flex items-center justify-between mb-4">
@@ -56,6 +58,7 @@ const Plants = () => {
         </div>
       </div>
     </div>
+    </MainLayout>
   );
 };
 
