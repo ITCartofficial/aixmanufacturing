@@ -32,7 +32,7 @@ const Plants = () => {
   };
 
   return (
-    <MainLayout>
+    
       <div>
       <TitleBar />
       <div className="mt-6 px-4 py-6 sm:px-6 bg-white shadow border">
@@ -58,7 +58,6 @@ const Plants = () => {
         </div>
       </div>
     </div>
-    </MainLayout>
   );
 };
 

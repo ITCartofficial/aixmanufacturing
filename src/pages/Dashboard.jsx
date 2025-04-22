@@ -10,7 +10,7 @@ import AreaCharts from "../components/charts/AreaCharts";
 
 const Dashboard = () => {
   return (
-    <MainLayout>
+    <div>
       <div className="hero_dash flex items-center justify-between w-100">
         <div className="hero_dash_texts">
           <h1 className="text-[32px] font-semibold">Hello John,</h1>
@@ -75,7 +75,7 @@ const Dashboard = () => {
       </Container>
 
       <div className="flex"></div>
-    </MainLayout>
+    </div>
   );
 };
 

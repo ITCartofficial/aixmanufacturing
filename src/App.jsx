@@ -1,9 +1,15 @@
+import MainLayout from "./components/MainLayout";
 import Dashboard from "./pages/Dashboard";
 import Plants from "./pages/Plants";
+import { Routes, Route } from "react-router";
 
 export default function App() {
   return (
-    // <Dashboard />
-  <Plants/>
+    <MainLayout>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/plants" element={<Plants />} />
+      </Routes>
+    </MainLayout>
   );
 }
