@@ -73,6 +73,8 @@ const Dashboard = () => {
       >
         <AreaCharts name="OEE Trend Graph" />
       </Container>
+
+      <div className="flex"></div>
     </MainLayout>
   );
 };
