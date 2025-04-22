@@ -9,7 +9,7 @@ import { FaUserCog } from "react-icons/fa";
 const Sidebar = ({sidebar}) => {
 
   return (
-    <div className={`h-screen py-3 ${sidebar==260 ? "w-[260px]" : ""} bg-[#ffffff] px-4 flex flex-col justify-start overflow-hidden ${sidebar !== 260 ? "hiddenLabel" : ""}`}>
+    <div className={`flex-shrink-0 h-screen py-3 ${sidebar==260 ? "w-[260px]" : ""} bg-[#ffffff] px-4 flex flex-col justify-start overflow-hidden ${sidebar !== 260 ? "hiddenLabel" : ""}`}>
       <ul className="flex flex-col gap-2">
         <li className="text-[16px] flex gap-3 items-center font-semibold text-[#4B4B4B] cursor-pointer hover:text-[#ffffff] hover:bg-[#5D60EF] py-3 px-3 rounded-[10px]">
           <MdSpaceDashboard className="text-[20px]" />

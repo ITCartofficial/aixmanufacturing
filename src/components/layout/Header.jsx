@@ -2,14 +2,15 @@ import { FaRegBell, FaSearch } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoSearchOutline } from "react-icons/io5";
 import ProfileSection from "../common/ProfileSection";
-import defaultUser from "/default-user.jpg";
+import defaultUser from "../../assets/default-user.jpg";
+import SelectDropdown from "../common/SelectDropdown";
 
 const Header = ({ setsb, notiCount = true }) => {
   const toggleSidebar = () => {
     setsb((prev) => (prev === 260 ? 0 : 260));
   };
   return (
-    <div className="w-full bg-[#FFFFFF] flex justify-between items-center px-6 shadow-sm h-[60px]">
+    <div className="w-full bg-[#FFFFFF] flex justify-between items-center px-6 shadow-sm h-[80px]">
       <div className="flex items-center gap-4">
         <RxHamburgerMenu
           className="text-[24px] text-gray-700 cursor-pointer"
@@ -18,10 +19,7 @@ const Header = ({ setsb, notiCount = true }) => {
         <h1 className="text-[20px] font-semibold text-black">
           AixManufacturing
         </h1>
-        <select className="border border-gray-300 rounded-md p-1 text-gray-700 focus:outline-none text-[16px]">
-          <option value="all">All Plants</option>
-          <option value="lorem">Lorem Ipsum</option>
-        </select>
+        <SelectDropdown data={[{ value: "all", label:"All Plants"}, { value: "lorem", label:"Lorem Ipsumm"}]} />
       </div>
 
       <div className="flex items-center gap-4">
@@ -43,7 +41,11 @@ const Header = ({ setsb, notiCount = true }) => {
           <FaRegBell className="text-gray-700 text-[20px]" />
         </div>
 
-        <ProfileSection name="Numan" role="Software Engineer II" imageUrl={defaultUser} />
+        <ProfileSection
+          name="Numan"
+          role="Software Engineer II"
+          imageUrl={defaultUser}
+        />
       </div>
     </div>
   );

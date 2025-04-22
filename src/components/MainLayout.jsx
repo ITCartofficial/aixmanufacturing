@@ -7,9 +7,9 @@ const MainLayout = ({ children }) => {
   return (
     <div className="w-screen bg-[#f5f5f5] h-screen overflow-hidden">
       <Header setsb={setsb} />
-      <div className="flex h-full">
+      <div className="flex h-[calc(100vh-80px)]">
         <Sidebar sidebar={sb} />
-        <div className="p-2">{children}</div>
+        <div className="main_container p-6 flex flex-col flex-1 gap-6 overflow-y-auto h-full">{children}</div>
       </div>
     </div>
   );
