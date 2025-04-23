@@ -1,11 +1,10 @@
 import React, {useState, useEffect} from "react";
-import TitleBar from "../../components/common/TitleBar";
-import StatCard from "../../components/common/StatCard";
-import DashboardIcon from "../assets/icons/dashboard-icon.png";
-import IndustryIcon from "../assets/icons/industry.png";
-import FinanceIcon from "../assets/icons/finance.png";
-import GearIcon from "../assets/icons/gear.png";
-import SettingsIcon from "../assets/icons/settings.png";
+
+import DashboardIcon from "../../assets/icons/dashboard-icon.png";
+import IndustryIcon from "../../assets/icons/industry.png";
+import FinanceIcon from "../../assets/icons/finance.png";
+import GearIcon from "../../assets/icons/gear.png";
+import SettingsIcon from "../../assets/icons/settings.png";
 import Dropdown from "../../components/common/Dropdown";
 import Table from "../../components/table/Table";
 import Pagination from "../../components/table/Pagination";
@@ -13,8 +12,10 @@ import {allPlants} from "../../lib/plantsData";
 
 import {FiEye, FiTrash2, FiArrowDown} from "react-icons/fi";
 import {MdModeEdit} from "react-icons/md";
-import UpGraph from "../assets/icons/UpGraph.svg";
-import DownGraph from "../assets/icons/DownGraph.svg";
+import UpGraph from "../../assets/icons/UpGraph.svg";
+import DownGraph from "../../assets/icons/DownGraph.svg";
+import TitleBar from "../../components/common/TitleBar";
+import StatCard from "../../components/common/StatCard";
 
 const Plants = () => {
   const stats = [

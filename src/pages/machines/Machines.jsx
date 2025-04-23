@@ -1,12 +1,12 @@
-import Dropdown from "../components/common/Dropdown";
-import TitleBar from "../components/common/TitleBar";
+import Dropdown from "../../components/common/Dropdown";
+import TitleBar from "../../components/common/TitleBar";
 
-import IndustryIcon from "../assets/icons/industry.png";
-import GearIcon from "../assets/icons/gear.png";
-import SettingsPurple from "../assets/icons/settings-purple.png";
-import SettingsGreen from "../assets/icons/settings-green.png";
-import AlertIcon from "../assets/icons/alert.png";
-import StatCard from "../components/common/StatCard";
+import IndustryIcon from "../../assets/icons/industry.png";
+import GearIcon from "../../assets/icons/gear.png";
+import SettingsPurple from "../../assets/icons/settings-purple.png";
+import SettingsGreen from "../../assets/icons/settings-green.png";
+import AlertIcon from "../../assets/icons/alert.png";
+import StatCard from "../../components/common/StatCard";
 import {useState} from "react";
 
 const Machines = () => {

@@ -1,7 +1,7 @@
 import React from "react";
-import {FiUpload} from "react-icons/fi";
+import { FiUpload } from "react-icons/fi";
 
-const TitleBar = ({title, outlineBtn, fillBtn, Desc}) => {
+const TitleBar = ({ title, outlineBtn, fillBtn, Desc }) => {
   return (
     <section className="w-full flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
       <div>
@@ -9,9 +9,7 @@ const TitleBar = ({title, outlineBtn, fillBtn, Desc}) => {
           {title}
         </h1>
         {Desc && (
-          <p className="text-base text-gray-500 font-normal mt-2">
-            {Desc}
-          </p>
+          <p className="text-base text-gray-500 font-normal mt-2">{Desc}</p>
         )}
       </div>
       <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
