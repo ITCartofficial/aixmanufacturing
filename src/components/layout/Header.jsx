@@ -17,7 +17,7 @@ const Header = ({ setsb, notiCount = true }) => {
           onClick={toggleSidebar}
         />
         <h1 className="text-[20px] font-semibold text-black">
-          AixManufacturing
+          AiXManufacturing
         </h1>
         <SelectDropdown data={[{ value: "all", label:"All Plants"}, { value: "lorem", label:"Lorem Ipsumm"}]} />
       </div>

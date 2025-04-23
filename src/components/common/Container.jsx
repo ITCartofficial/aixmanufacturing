@@ -5,6 +5,12 @@ import { MdChevronRight } from "react-icons/md";
 
 
 const Container = ({ id, label, dropDown, children, opt, className = "" }) => {
+  const options = [
+    { value: 7, label: "Last 7 Days" },
+    { value: 30, label: "Last Month" },
+    { value: 90, label: "Last 3 Months" },
+    { value: 180, label: "Last 6 Months" },
+  ]
   return (
     <div
       id={id}
@@ -15,10 +21,7 @@ const Container = ({ id, label, dropDown, children, opt, className = "" }) => {
         <div className="flex items-center gap-4">
         {dropDown && (
           <SelectDropdown
-            data={[
-              { value: 7, label: "Last 7 Days" },
-              { value: 30, label: "Last 30 Days" },
-            ]}
+            data={options}
           />
         )}
         {opt && (
