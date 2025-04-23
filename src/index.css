@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.hiddenLabel ul li span {
+*{
+  font-family: 'DM Sans', sans-serif;
+}
+
+.hiddenLabel ul span {
   display: none;
 }
