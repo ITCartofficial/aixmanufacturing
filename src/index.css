@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.hiddenLabel ul li span {
+.hiddenLabel ul span {
   display: none;
 }
