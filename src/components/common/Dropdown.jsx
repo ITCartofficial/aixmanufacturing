@@ -10,7 +10,7 @@ const Dropdown = ({ options, selectedOption, onSelect, buttonText }) => {
     <div className="relative">
       <button
         onClick={toggleDropdown}
-        className="flex items-center px-6 py-2 border border-gray-300 bg-white rounded-md shadow-sm text-gray-700 text-sm hover:bg-gray-100 focus:outline-none"
+        className="flex items-center px-6 py-[6px] border border-gray-300 bg-white rounded-md shadow-sm text-black text-sm hover:bg-gray-100 focus:outline-none"
       >
         {selectedOption || buttonText} {/* Show the selected option or buttonText if no option is selected */}
         <FiChevronDown className="ml-2 h-5 w-5 text-gray-500"/>
@@ -26,7 +26,7 @@ const Dropdown = ({ options, selectedOption, onSelect, buttonText }) => {
                   onSelect(option); // When an option is selected, call onSelect
                   setIsOpen(false);
                 }}
-                className="px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer"
+                className="px-4 py-[6px] text-black hover:bg-gray-100 cursor-pointer text-sm"
               >
                 {option}
               </li>

@@ -6,7 +6,14 @@ export default {
       fontFamily: {
         sans: ['"DM Sans"', "sans-serif"],
       },
+      colors: {
+        primary: {
+          DEFAULT: "#5D60EF",
+          hover: "#4439c9",
+        },
+      
     },
   },
+},
   plugins: [],
 };

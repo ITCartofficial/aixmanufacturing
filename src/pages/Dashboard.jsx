@@ -19,7 +19,7 @@ const Dashboard = () => {
           </p>
         </div>
         <div className="hero_dash_img">
-          <PrimaryBtn
+        <PrimaryBtn
             label="Export"
             icon={<BiExport className="text-[20px]" />}
           />

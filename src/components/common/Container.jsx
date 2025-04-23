@@ -1,7 +1,7 @@
 import React, { Children } from "react";
 import SelectDropdown from "./SelectDropdown";
 
-const Container = ({ id, label, dropDown=[], children, opt }) => {
+const Container = ({ id, label, dropDown, children, opt }) => {
   return (
     <div
       id={id}
@@ -9,7 +9,7 @@ const Container = ({ id, label, dropDown=[], children, opt }) => {
     >
       <div className="card_header flex items-center justify-between w-100">
         <h2 className="text-[20px] font-bold">{label}</h2>
-        <SelectDropdown data={dropDown} />
+        {dropDown && <SelectDropdown data={dropDown} />}
         {opt && opt}
       </div>
       {children}
