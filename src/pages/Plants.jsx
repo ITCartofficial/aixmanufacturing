@@ -180,7 +180,7 @@ const Plants = () => {
   };
 
   return (
-    <MainLayout>
+    <>
       <div className="flex flex-col gap-6">
         <TitleBar />
         <div className="w-full px-4 p-6 sm:px-6 bg-white border rounded-[10px]">
@@ -416,7 +416,7 @@ const Plants = () => {
           </div>
         </div>
       </div>
-    </MainLayout>
+    </>
   );
 };
 
