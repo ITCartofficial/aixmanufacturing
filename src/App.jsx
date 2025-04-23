@@ -1,7 +1,7 @@
 import MainLayout from "./components/MainLayout";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Machines from "./pages/Machines";
-import Plants from "./pages/Plants";
+import Plants from "./pages/plants/Plants";
 import { Routes, Route } from "react-router";
 
 export default function App() {

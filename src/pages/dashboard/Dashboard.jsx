@@ -11,11 +11,12 @@ import TaskStatusDash from "./features/TaskStatusDash";
 import InventoryOverviewDash from "./features/InventoryOverviewDash";
 import AiInsidesDash from "./features/AiInsidesDash";
 import AlertNotiDash from "./features/AlertNotiDash";
+import TitleBar from "../../components/common/TitleBar";
 
 const Dashboard = () => {
   return (
     <>
-      <div className="hero_dash flex items-center justify-between w-100">
+      {/* <div className="hero_dash flex items-center justify-between w-100">
         <div className="hero_dash_texts">
           <h1 className="text-[32px] font-semibold">Hello John,</h1>
           <p className="text-[14px] text-[#000000] font-normal">
@@ -28,7 +29,9 @@ const Dashboard = () => {
             icon={<BiExport className="text-[20px]" />}
           />
         </div>
-      </div>
+      </div> */}
+
+      <TitleBar title={"Hello John,"} Desc="Welcome to AiXManufacturing" fillBtn={"Export"} />
 
       <OverviewDash />
       <TrendGraphDash />
