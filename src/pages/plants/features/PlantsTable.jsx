@@ -24,8 +24,8 @@ const PlantsTable = ({ selectedFilter, onFilterChange }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(10);
   const [sortConfig, setSortConfig] = useState({
-    field: "name",
-    direction: "asc",
+    field: "",
+    direction: "",
   });
   const [selectedRows, setSelectedRows] = useState({});
   
