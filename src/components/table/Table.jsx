@@ -62,7 +62,7 @@ const Table = ({
           <thead>
             <tr className="border-b text-sm">
               {columns.map((column, index) => (
-                <th key={index} className="p-3 text-left font-bold text-black">
+                <th key={index} className={`py-3 px-2.5 text-left font-bold text-black ${column.widthClass || ''}`}>
                   {column.type === 'checkbox' ? (
                     <input 
                       type="checkbox" 
