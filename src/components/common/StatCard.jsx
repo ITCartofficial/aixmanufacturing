@@ -9,7 +9,7 @@ const colorMap = {
   green: { text: "text-[#47B881]", bg: "bg-[#47B881]", arrow: TiArrowSortedUp },
 };
 
-const StatCard = ({ title, value, icon, statusIndicator }) => {
+const StatCard = ({ title, value, icon, statusIndicator, className}) => {
   const renderIndicator = () => {
     if (!statusIndicator) return null;
 
@@ -29,7 +29,7 @@ const StatCard = ({ title, value, icon, statusIndicator }) => {
   };
 
   return (
-    <div className="bg-white p-4 rounded-xl shadow flex flex-col justify-between h-full border">
+    <div className={`bg-white p-4 rounded-xl shadow flex flex-col justify-between h-full border ${className}`}>
       <div className="flex justify-end">
         <img src={icon} alt="Icon" className="w-12 h-12 object-contain" />
       </div>
