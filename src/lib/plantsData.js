@@ -1,3 +1,17 @@
+import DashboardIcon from "../assets/icons/dashboard-icon.png";
+import IndustryIcon from "../assets/icons/industry.png";
+import FinanceIcon from "../assets/icons/finance.png";
+import GearIcon from "../assets/icons/gear.png";
+import SettingsIcon from "../assets/icons/settings.png";
+
+export  const plantStats = [
+  {title: "Total plants", value: "12", icon: IndustryIcon},
+  {title: "Operational Plants", value: "09", icon: SettingsIcon},
+  {title: "Under Maintenance", value: "3", icon: GearIcon, statusIndicator: { type: "dot", color: "orange" }},
+  {title: "Overall OEE", value: "89.3%", icon: DashboardIcon, statusIndicator: { type: "arrow", color: "green" }},
+  {title: "Budget Deviation", value: "+ $12,400", icon: FinanceIcon, statusIndicator: { type: "arrow", color: "red" }},
+];
+
 export const allPlants = [
     {
       id: 1,

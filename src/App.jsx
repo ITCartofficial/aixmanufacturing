@@ -1,5 +1,5 @@
 import MainLayout from "./components/MainLayout";
-import Router from "./Routes/Router";
+import Router from "./routes/Router";
 
 export default function App() {
   return (
