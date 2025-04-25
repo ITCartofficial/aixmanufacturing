@@ -7,6 +7,8 @@ import { FiEye, FiTrash2, FiArrowDown } from "react-icons/fi";
 import { MdModeEdit } from "react-icons/md";
 import UpGraph from "../../../assets/icons/UpGraph.svg";
 import DownGraph from "../../../assets/icons/DownGraph.svg";
+import { Link } from "react-router";
+import { textToSlug } from "../../../utils/textToSlug";
 
 const PlantsTable = ({ selectedFilter, onFilterChange }) => {
   // Tab is purely visual with no data connection
@@ -118,9 +120,9 @@ const PlantsTable = ({ selectedFilter, onFilterChange }) => {
       </td>
       <td className="p-3">
         <div className="flex space-x-2">
-          <button className="text-[#3B82F6]">
+          <Link to={`/plants/${plant.id}/${textToSlug(plant.name)}`} className="text-[#3B82F6]">
             <FiEye className="h-5 w-5" />
-          </button>
+          </Link>
           <button className="text-black">
             <MdModeEdit className="h-5 w-5" />
           </button>

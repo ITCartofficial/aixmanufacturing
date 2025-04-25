@@ -12,6 +12,7 @@ const Router = () => {
         <Route path="/plants" element={<Plants />} />
         <Route path="/machines" element={<Machines />} />
         <Route path="plants/:plantId/:slug" element={<Sub_Plants />} />
+        {/* <Route path="plants/:plantId/:slug" element={<Sub_Plants />} /> */}
       </Routes>
   )
 }
