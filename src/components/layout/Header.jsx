@@ -19,7 +19,7 @@ const Header = ({ setsb, notiCount = true }) => {
         <h1 className="text-[20px] font-semibold text-black">
           AiXManufacturing
         </h1>
-        <SelectDropdown data={[{ value: "all", label:"All Plants"}, { value: "lorem", label:"Lorem Ipsumm"}]} />
+        <SelectDropdown data={[{ value: "all", label:"All Plants"}, { value: "orionplant", label:"Orion Plant"}]} />
       </div>
 
       <div className="flex items-center gap-4">

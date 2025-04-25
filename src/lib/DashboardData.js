@@ -49,10 +49,10 @@ export const tasks = [
 ];
 
 export const statusColors = {
-  "In Progress": "bg-blue-100 text-blue-600",
-  Pending: "bg-amber-100 text-amber-600",
-  Scheduled: "bg-fuchsia-100 text-fuchsia-600",
-  Completed: "bg-green-100 text-green-600",
+  "In Progress": "bg-[#E1F3FD] text-[#0987C0] border border-[#0987C0]",
+  Pending: "bg-[#F2E7D3] text-[#AC5F34] border border-[#AC5F34]",
+  Scheduled: "bg-[#F9EAF5] text-[#C43E8A] border border-[#C43E8A]",
+  Completed: "bg-[#DBFDEC] text-[#10A95C] border border-[#10A95C]",
 };
 
 export const inventoryData = [

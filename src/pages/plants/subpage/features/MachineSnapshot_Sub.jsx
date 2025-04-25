@@ -1,4 +1,6 @@
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
+import { MdChevronRight } from "react-icons/md";
+import { Link } from "react-router";
 
 const MachineSnapshot_Sub = ({
   imageUrl,
@@ -21,11 +23,11 @@ const MachineSnapshot_Sub = ({
   }[statusColor];
 
   return (
-    <div className="col-span-5 rounded-xl shadow-md overflow-hidden bg-white">
+    <div className="w-full h-full rounded-xl shadow-md overflow-hidden bg-white">
       {/* Header */}
       <div className="flex items-center justify-between px-6 py-4 border-b">
         <div className="flex items-center space-x-4 text-gray-500">
-          <h2 className="text-lg font-semibold">Machine Snapshot</h2>
+          <h2 className="text-xl font-bold text-black">Machine Snapshot</h2>
           <button onClick={onPrev} className="p-1 hover:bg-gray-100 rounded">
             <BiChevronLeft className="text-base" />
           </button>
@@ -36,17 +38,16 @@ const MachineSnapshot_Sub = ({
           </button>
         </div>
 
-        <a
-          href="#"
-          className="text-sm text-[#0077FF] font-medium flex items-center gap-1"
-        >
-          <span>View all</span>
-          <BiChevronRight className="text-base" />
-        </a>
+        <Link to={"#"} className="flex items-center">
+            <button className="text-blue-500 hover:text-blue-700 text-[16px] font-medium">
+              View all
+            </button>
+            <MdChevronRight className="text-blue-500 hover:text-blue-700 text-[16px]" />
+          </Link>
       </div>
 
       {/* Content */}
-      <div className="grid grid-cols-5 md:flex-row p-6 gap-4">
+      <div className="grid grid-cols-5 md:flex-row p-6 gap-4 items-center">
         <div className="bg-slate-700 h-full col-span-2 w-full rounded-lg ">
           <img
             src={imageUrl}

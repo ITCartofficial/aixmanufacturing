@@ -16,7 +16,7 @@ const AlertNotiDash = () => {
   return (
     <Container
       className="col-span-4 h-full"
-      label="Alerts & Notifications"
+      label="Alerts"
       dropDown={true}
       opt={{ label: "View all", url: "/units" }}
     >
