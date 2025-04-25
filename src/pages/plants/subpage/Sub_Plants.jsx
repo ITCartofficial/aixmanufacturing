@@ -1,8 +1,8 @@
 import { useParams } from "react-router";
-import TitleBar from "../../../components/common/TitleBar";
-import { slugToTitle } from "../../../utils/slugToTitle";
-import MachineSnapshotImage from "../../../assets/MachineSnapshot.png";
-import Container from "../../../components/common/Container";
+import TitleBar from "@/components/common/TitleBar";
+import { slugToTitle } from "@/utils/slugToTitle";
+import MachineSnapshotImage from "@/assets/MachineSnapshot.png";
+import Container from "@/components/common/Container";
 
 import Matrics_Sub from "./features/Matrics_Sub";
 import DigitalTwinView_Sub from "./features/DigitalTwinView_Sub";
