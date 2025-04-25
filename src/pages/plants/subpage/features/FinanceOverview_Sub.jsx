@@ -2,7 +2,7 @@ import React from "react";
 import ReactApexChart from "react-apexcharts";
 import SelectDropdown from "../../../../components/common/SelectDropdown";
 
-const FinanceOverview_Sub = () => {
+const FinanceOverview_Sub = ({ data }) => {
   const chartOptions = {
     chart: {
       type: "bar",
@@ -18,15 +18,7 @@ const FinanceOverview_Sub = () => {
     dataLabels: { enabled: false },
     stroke: { show: true, width: 2, colors: ["transparent"] },
     xaxis: {
-      categories: [
-        "17 Sun",
-        "18 Mon",
-        "19 Tue",
-        "20 Wed",
-        "21 Thu",
-        "22 Fri",
-        "23 Sat",
-      ],
+      categories: data.overview.map((item) => item.date),
       labels: { style: { colors: "#6B7280", fontSize: "12px" } }, // gray-500
     },
     yaxis: {
@@ -50,11 +42,11 @@ const FinanceOverview_Sub = () => {
   const chartSeries = [
     {
       name: "Spend",
-      data: [50000, 20000, 50000, 40000, 30000, 10000, 25000],
+      data: data.overview.map((item) => item.spend),
     },
     {
       name: "Profit",
-      data: [70000, 30000, 20000, 50000, 50000, 60000, 45000],
+      data: data.overview.map((item) => item.profit),
     },
   ];
   return (
@@ -62,7 +54,7 @@ const FinanceOverview_Sub = () => {
       {/* Header */}
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-semibold text-gray-800">
-          Finance Overview
+          Financial Overview
         </h2>
         <div className="flex items-center gap-4">
           {/* Legends */}

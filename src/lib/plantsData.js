@@ -1,8 +1,8 @@
-import DashboardIcon from "../assets/icons/dashboard-icon.png";
-import IndustryIcon from "../assets/icons/industry.png";
-import FinanceIcon from "../assets/icons/finance.png";
-import GearIcon from "../assets/icons/gear.png";
-import SettingsIcon from "../assets/icons/settings.png";
+import DashboardIcon from "@/assets/icons/dashboard-icon.png";
+import IndustryIcon from "@/assets/icons/industry.png";
+import FinanceIcon from "@/assets/icons/finance.png";
+import GearIcon from "@/assets/icons/gear.png";
+import SettingsIcon from "@/assets/icons/settings.png";
 
 export  const plantStats = [
   {title: "Total plants", value: "12", icon: IndustryIcon},

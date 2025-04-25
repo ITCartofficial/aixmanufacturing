@@ -13,6 +13,14 @@ import TaskStatusDash from "../../dashboard/features/TaskStatusDash";
 import AiInsidesDash from "../../dashboard/features/AiInsidesDash";
 import ProfitLossTable_Sub from "./features/ProfitLossTable_Sub";
 
+import plantsDB from "@/lib/plantsDB.json";
+
+const currentDB = plantsDB[0]
+
+// console.log(currentDB.labourOverview.data);
+
+
+
 const Sub_Plants = () => {
   const { plantId, slug } = useParams();
   const title = slug ? slugToTitle(slug) : "Unknown";
@@ -37,8 +45,8 @@ const Sub_Plants = () => {
       />
 
       <div className="grid lg:grid-cols-10 gap-4 mt-4 items-stretch min-h-[300px]">
-        <Matrics_Sub />
-        <DigitalTwinView_Sub />
+        <Matrics_Sub matrics={currentDB.matrics} />
+        <DigitalTwinView_Sub data={currentDB.digitalTwinView} />
       </div>
 
       <div className="grid lg:grid-cols-10 gap-4 mt-4 items-stretch">
@@ -58,7 +66,7 @@ const Sub_Plants = () => {
           />
         </div>
         <div className="col-span-5">
-          <FinanceOverview_Sub />
+          <FinanceOverview_Sub data={currentDB.financialOverview} />
         </div>
       </div>
 
@@ -70,7 +78,7 @@ const Sub_Plants = () => {
             opt={{ label: "View all", url: "/units" }}
             className="h-full"
           >
-            <LabourTable_Sub />
+            <LabourTable_Sub data={currentDB.labourOverview.data} />
           </Container>
         </div>
         <div className="col-span-5">

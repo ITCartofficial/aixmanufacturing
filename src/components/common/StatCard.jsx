@@ -9,7 +9,7 @@ const colorMap = {
   green: { text: "text-[#47B881]", bg: "bg-[#47B881]", arrow: TiArrowSortedUp },
 };
 
-const StatCard = ({ title, value, icon, statusIndicator, className}) => {
+const StatCard = ({ title, value, icon, statusIndicator, className, valueText=""}) => {
   const renderIndicator = () => {
     if (!statusIndicator) return null;
 
@@ -29,14 +29,14 @@ const StatCard = ({ title, value, icon, statusIndicator, className}) => {
   };
 
   return (
-    <div className={`bg-white p-4 rounded-xl shadow flex flex-col justify-between h-full border ${className}`}>
+    <div className={`bg-white p-4 rounded-xl shadow flex flex-col justify-between h-full border gap-1 ${className}`}>
       <div className="flex justify-end">
         <img src={icon} alt="Icon" className="w-12 h-12 object-contain" />
       </div>
-      <div className="mt-4 text-3xl font-bold text-black flex items-center">
+      <div className={`mt-4 text-3xl font-bold text-black flex items-center ${valueText && valueText}`}>
         {value}
       </div>
-      <div className="text-base font-medium text-[#8E8E8E] mt-1">{renderIndicator()} {title}</div>
+      <div className="text-base font-medium text-[#8E8E8E]">{renderIndicator()} {title}</div>
     </div>
   );
 };

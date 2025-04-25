@@ -1,0 +1,346 @@
+[
+  {
+    "id": 1,
+    "name": "Orion Plant",
+    "machine": 65,
+    "labour": 48,
+    "oee": 88.3,
+    "downtime": "1h 15m",
+    "lastActivity": "1 hr ago",
+    "financialStatus": "+$4,250",
+    "financialTrend": "up",
+    "matrics": {
+      "machines": 40,
+      "labour": 32,
+      "oee": 89.3,
+      "budgetDeviation": 12400,
+      "operationalStatus": "Operational",
+      "trend": "positive"
+    },
+    "digitalTwinView": {
+      "name": "Digital Twin View",
+      "tabs": [
+        {
+          "key": "overall",
+          "label": "Overall View",
+          "img": "@/assets/plant-image.png"
+        },
+        {
+          "key": "assemblyArea",
+          "label": "Assembly Area",
+          "img": "@/assets/assembly_area.jpg"
+        },
+        {
+          "key": "productionArea",
+          "label": "Production Area",
+          "img": "@/assets/plant-image.png"
+        },
+        {
+          "key": "storageArea",
+          "label": "Storage Area",
+          "img": "@/assets/assembly_area.jpg"
+        }
+      ]
+    },
+
+    "machineSnapshot": {
+      "name": "Machine Snapshot",
+      "data": [
+        {
+          "id": 101,
+          "name": "CNC Milling 3000",
+          "status": "operational",
+          "lastMaintenance": "03-20-2025",
+          "nextMaintenance": "06-20-2025",
+          "utilization": 91.2,
+          "temp": "89",
+          "vibration": "0.8",
+          "image": "@/assets/MachineSnapshot.png"
+        },
+        {
+          "id": 102,
+          "name": "CNC Lathe 2000",
+          "status": "operational",
+          "lastMaintenance": "03-20-2025",
+          "nextMaintenance": "06-20-2025",
+          "utilization": 85.4,
+          "temp": "92",
+          "vibration": "0.7",
+          "image": "@/assets/MachineSnapshot.png"
+        },
+        {
+          "id": 103,
+          "name": "3D Printer Pro X",
+          "status": "operational",
+          "lastMaintenance": "03-20-2025",
+          "nextMaintenance": "06-20-2025",
+          "utilization": 78.9,
+          "temp": "95",
+          "vibration": "0.6",
+          "image": "@/assets/MachineSnapshot.png"
+        },
+        {
+          "id": 104,
+          "name": "Laser Cutter 5000",
+          "status": "operational",
+          "lastMaintenance": "03-20-2025",
+          "nextMaintenance": "06-20-2025",
+          "utilization": 82.1,
+          "temp": "88",
+          "vibration": "0.9",
+          "image": "@/assets/MachineSnapshot.png"
+        },
+        {
+          "id": 105,
+          "name": "Injection Molding 4000",
+          "status": "operational",
+          "lastMaintenance": "03-20-2025",
+          "nextMaintenance": "06-20-2025",
+          "utilization": 90.3,
+          "temp": "91",
+          "vibration": "0.8",
+          "image": "@/assets/MachineSnapshot.png"
+        }
+      ]
+    },
+    "labourOverview": {
+      "name": "Labour Overview",
+      "data": [
+        {
+          "id": 1,
+          "name": "Arun Joshi",
+          "role": "Maintenance Eng.",
+          "taskAssigned": 3,
+          "status": "on duty"
+        },
+        {
+          "id": 2,
+          "name": "Priya Sharma",
+          "role": "Production Manager",
+          "taskAssigned": 5,
+          "status": "leave"
+        },
+        {
+          "id": 3,
+          "name": "Ravi Kumar",
+          "role": "Quality Control",
+          "taskAssigned": 2,
+          "status": "out"
+        },
+        {
+          "id": 4,
+          "name": "Sita Devi",
+          "role": "Assembly Line Worker",
+          "taskAssigned": 4,
+          "status": "scheduled"
+        },
+        {
+          "id": 5,
+          "name": "Rahul Singh",
+          "role": "Logistics Coordinator",
+          "taskAssigned": 1,
+          "status": "on duty"
+        },
+        {
+          "id": 6,
+          "name": "Anjali Verma",
+          "role": "HR Manager",
+          "taskAssigned": 0,
+          "status": "on duty"
+        }
+      ]
+    },
+    "taskStatus": {
+      "name": "Task Status",
+      "data": [
+        {
+          "id": 1,
+          "name": "Replace motor (BX-450)",
+          "status": "completed",
+          "assignedTo": "Arun Joshi",
+          "dueDate": "2025-03-20"
+        },
+        {
+          "id": 2,
+          "name": "Inspect CNC Lathe",
+          "status": "in progress",
+          "assignedTo": "Priya Sharma",
+          "dueDate": "2025-03-22"
+        },
+        {
+          "id": 3,
+          "name": "Calibrate 3D Printer",
+          "status": "pending",
+          "assignedTo": "Ravi Kumar",
+          "dueDate": "2025-03-25"
+        },
+        {
+          "id": 4,
+          "name": "Clean Laser Cutter",
+          "status": "scheduled",
+          "assignedTo": "Sita Devi",
+          "dueDate": "2025-03-18"
+        },
+        {
+          "id": 5,
+          "name": "Update software (IM-4000)",
+          "status": "in progress",
+          "assignedTo": "Rahul Singh",
+          "dueDate": "2025-03-21"
+        },
+        {
+          "id": 6,
+          "name": "Schedule maintenance meeting",
+          "status": "pending",
+          "assignedTo": "Anjali Verma",
+          "dueDate": null
+        }
+      ]
+    },
+    "aiInsights": {
+      "name": "AI Insights",
+      "data": [
+        {
+          "id": 1,
+          "machine": "Predictive Maintenance",
+          "suggestedAction": "Schedule Immediate Maintenance",
+          "alertType": "temp strike",
+          "riskLevel": "high"
+        },
+        {
+          "id": 2,
+          "machine": "CNC Lathe 2000",
+          "suggestedAction": "Check coolant levels",
+          "alertType": "low coolant",
+          "riskLevel": "medium"
+        },
+        {
+          "id": 3,
+          "machine": "3D Printer Pro X",
+          "suggestedAction": "Replace filament",
+          "alertType": "material shortage",
+          "riskLevel": "low"
+        },
+        {
+          "id": 4,
+          "machine": "Laser Cutter 5000",
+          "suggestedAction": "Clean lens",
+          "alertType": "performance drop",
+          "riskLevel": "medium"
+        },
+        {
+          "id": 5,
+          "machine": "Injection Molding 4000",
+          "suggestedAction": "Check hydraulic fluid",
+          "alertType": "fluid level low",
+          "riskLevel": "high"
+        },
+        {
+          "id": 6,
+          "machine": "CNC Milling 3000",
+          "suggestedAction": "Inspect spindle",
+          "alertType": "vibration spike",
+          "riskLevel": "medium"
+        }
+      ]
+    },
+    "financialOverview": {
+      "name": "Financial Overview",
+      "overview": [
+        {
+          "id": 1,
+          "name": "Q1",
+          "spend": 50000,
+          "profit": 70000,
+          "date": "17 Sun"
+        },
+        {
+          "id": 2,
+          "name": "Q2",
+          "spend": 80000,
+          "profit": 50000,
+          "date": "18 Mon"
+        },
+        {
+          "id": 3,
+          "name": "Q3",
+          "spend": 70000,
+          "profit": 90000,
+          "date": "19 Tue"
+        },
+        {
+          "id": 4,
+          "name": "Q4",
+          "spend": 80000,
+          "profit": 100000,
+          "date": "20 Wed"
+        },
+        {
+          "id": 5,
+          "name": "Q5",
+          "spend": 60000,
+          "profit": 60000,
+          "date": "21 Thu"
+        },
+        {
+          "id": 6,
+          "name": "Q6",
+          "spend": 100000,
+          "profit": 120000,
+          "date": "22 Fri"
+        },
+        {
+          "id": 7,
+          "name": "Q7",
+          "spend": 50000,
+          "profit": 30000,
+          "date": "23 Sat"
+        }
+      ],
+      "profitLossData": [
+        {
+          "id": 1,
+          "category": "Operations",
+          "amount": 500000,
+          "profitLoss": 200000,
+          "trend": "up"
+        },
+        {
+          "id": 2,
+          "category": "Maintenance",
+          "amount": 200000,
+          "profitLoss": -50000,
+          "trend": "down"
+        },
+        {
+          "id": 3,
+          "category": "Production",
+          "amount": 300000,
+          "profitLoss": 100000,
+          "trend": "up"
+        },
+        {
+          "id": 4,
+          "category": "Logistics",
+          "amount": 150000,
+          "profitLoss": -20000,
+          "trend": "down"
+        },
+        {
+          "id": 5,
+          "category": "HR",
+          "amount": 100000,
+          "profitLoss": 50000,
+          "trend": "up"
+        },
+        {
+          "id": 6,
+          "category": "IT",
+          "amount": 80000,
+          "profitLoss": -10000,
+          "trend": "down"
+        }
+      ]
+    }
+  }
+]

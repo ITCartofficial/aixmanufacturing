@@ -19,7 +19,8 @@ const tabList = [
   { key: "storage", label: "Storage Area", image: assembly_area },
 ];
 
-const DigitalTwinView_Sub = () => {
+const DigitalTwinView_Sub = ({ data }) => {
+  
   const [activeTab, setActiveTab] = useState(tabList[0].key);
   const current = tabList.find((t) => t.key === activeTab);
 
