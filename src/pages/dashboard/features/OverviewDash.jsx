@@ -12,8 +12,8 @@ const OverviewDash = () => {
             title={stat.title}
             value={stat.value}
             icon={stat.icon}
-            valueClassName="text-3xl sm:text-2xl font-bold text-black"
-            titleClassName="text-sm sm:text-base font-semibold"
+            valueClassName="text-3xl font-bold text-black"
+            titleClassName="text-base font-semibold"
           />
         ))}
       </div>

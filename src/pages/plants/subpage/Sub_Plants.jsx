@@ -14,9 +14,9 @@ import ProfitLossTable_Sub from "./features/ProfitLossTable_Sub";
 
 import plantsDB from "@/lib/plantsDB.json";
 
-const currentDB = plantsDB[1];
+const currentDB = plantsDB[0];
 
-console.log(plantsDB);
+// console.log(plantsDB);
 
 const Sub_Plants = () => {
   const { plantId, slug } = useParams();

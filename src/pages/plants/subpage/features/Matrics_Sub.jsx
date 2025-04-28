@@ -49,7 +49,7 @@ const Matrics_Sub = ({ matrics }) => {
             icon={card.icon}
             statusIndicator={card.statusIndicator}
             className={index === 4 ? "col-span-2" : ""}
-            valueText="text-[20px] font-bold"
+            valueClassName="text-[20px] font-bold"
           />
         );
       })}
