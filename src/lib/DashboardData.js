@@ -24,25 +24,25 @@ export const units = [
 export const tasks = [
   {
     name: "Replace motor (BX-450)",
-    assignedTo: "Raj (Engineer)",
+    assignedTo: "user-1",
     dueDate: "14 Apr, 2025",
     status: "In Progress",
   },
   {
     name: "Inspect Nozzies",
-    assignedTo: "Sunil (Maintena)",
+    assignedTo: "user-2",
     dueDate: "14 Apr, 2025",
     status: "Pending",
   },
   {
     name: "Refill Coolant (CX-120)",
-    assignedTo: "Alia (Engineer)",
+    assignedTo: "user-3",
     dueDate: "16 Apr, 2025",
     status: "Scheduled",
   },
   {
     name: "Refill Coolant (CX-128)",
-    assignedTo: "Raj (Engineer)",
+    assignedTo: "user-4",
     dueDate: "14 Apr, 2025",
     status: "Completed",
   },

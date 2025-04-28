@@ -1,5 +1,7 @@
 import Container from "@/components/common/Container";
-import formatDate from "@/utils/formatDate.js"
+import formatDate from "@/utils/formatDate.js";
+import getUserDetails from "../../../utils/getUserDetails";
+import ShowProfile from "../../../components/common/ShowProfile";
 
 const TaskStatusDash = ({ tableData = [], row = 4 }) => {
   const statusColors = {
@@ -33,7 +35,12 @@ const TaskStatusDash = ({ tableData = [], row = 4 }) => {
                 className="border-b last:border-none text-[#4B4B4B] font-medium"
               >
                 <td className="px-4 py-4">{task.name}</td>
-                <td className="px-4 py-4">{task.assignedTo}</td>
+                <td className="px-4 py-4 flex gap-2 items-center">
+                  <span>
+                    {<ShowProfile user={getUserDetails(task.assignedTo)} />}
+                  </span>
+                  <span>{getUserDetails(task.assignedTo).role}</span>
+                </td>
                 <td className="px-4 py-4">{formatDate(task.dueDate)}</td>
                 <td className="px-4 py-3">
                   <span

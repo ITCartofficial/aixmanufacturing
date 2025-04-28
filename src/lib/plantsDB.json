@@ -157,42 +157,42 @@
           "id": 1,
           "name": "Replace motor (BX-450)",
           "status": "Completed",
-          "assignedTo": "Arun Joshi",
+          "assignedTo": "user-1",
           "dueDate": "2025-03-20"
         },
         {
           "id": 2,
           "name": "Inspect CNC Lathe",
           "status": "In Progress",
-          "assignedTo": "Priya Sharma",
+          "assignedTo": "user-2",
           "dueDate": "2025-03-22"
         },
         {
           "id": 3,
           "name": "Calibrate 3D Printer",
           "status": "Pending",
-          "assignedTo": "Ravi Kumar",
+          "assignedTo": "user-3",
           "dueDate": "2025-03-25"
         },
         {
           "id": 4,
           "name": "Clean Laser Cutter",
           "status": "Scheduled",
-          "assignedTo": "Sita Devi",
+          "assignedTo": "user-4",
           "dueDate": "2025-03-18"
         },
         {
           "id": 5,
           "name": "Update software (IM-4000)",
           "status": "In Progress",
-          "assignedTo": "Rahul Singh",
+          "assignedTo": "user-5",
           "dueDate": "2025-03-21"
         },
         {
           "id": 6,
           "name": "Schedule maintenance meeting",
           "status": "Pending",
-          "assignedTo": "Anjali Verma",
+          "assignedTo": "user-6",
           "dueDate": null
         }
       ]
