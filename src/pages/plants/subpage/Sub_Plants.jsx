@@ -1,7 +1,6 @@
 import { useParams } from "react-router";
 import TitleBar from "@/components/common/TitleBar";
 import { slugToTitle } from "@/utils/slugToTitle";
-import MachineSnapshotImage from "@/assets/MachineSnapshot.png";
 import Container from "@/components/common/Container";
 
 import Matrics_Sub from "./features/Matrics_Sub";
@@ -15,25 +14,13 @@ import ProfitLossTable_Sub from "./features/ProfitLossTable_Sub";
 
 import plantsDB from "@/lib/plantsDB.json";
 
-const currentDB = plantsDB[0]
+const currentDB = plantsDB[1];
 
-// console.log(currentDB.labourOverview.data);
-
-
+console.log(plantsDB);
 
 const Sub_Plants = () => {
   const { plantId, slug } = useParams();
   const title = slug ? slugToTitle(slug) : "Unknown";
-
-  const handlePrev = () => {
-    /* load previous machine */
-  };
-  const handleNext = () => {
-    /* load next machine */
-  };
-  const handleView = () => {
-    /* navigate to detail */
-  };
 
   return (
     <div>
@@ -51,19 +38,7 @@ const Sub_Plants = () => {
 
       <div className="grid lg:grid-cols-10 gap-4 mt-4 items-stretch">
         <div className="col-span-5">
-          <MachineSnapshot_Sub
-            imageUrl={MachineSnapshotImage}
-            id="M-101"
-            name="CNC Milling 3000"
-            status="Operational"
-            utilization={91.2}
-            temp="89°C"
-            vibration="High"
-            lastMaintenance="03-20-2025"
-            onPrev={handlePrev}
-            onNext={handleNext}
-            onView={handleView}
-          />
+          <MachineSnapshot_Sub machines={currentDB.machineSnapshot.data} />
         </div>
         <div className="col-span-5">
           <FinanceOverview_Sub data={currentDB.financialOverview} />
@@ -82,13 +57,16 @@ const Sub_Plants = () => {
           </Container>
         </div>
         <div className="col-span-5">
-          <TaskStatusDash />
+          <TaskStatusDash tableData={currentDB.taskStatus.data} />
         </div>
       </div>
 
       <div className="grid lg:grid-cols-10 gap-4 mt-4 items-stretch">
         <div className="col-span-6">
-          <AiInsidesDash />
+          <AiInsidesDash
+            tableData={currentDB.aiInsights.data}
+            isPlant={false}
+          />
         </div>
         <div className="col-span-4">
           <Container
@@ -97,7 +75,9 @@ const Sub_Plants = () => {
             opt={{ label: "View all", url: "/units" }}
             className="h-full"
           >
-            <ProfitLossTable_Sub />
+            <ProfitLossTable_Sub
+              tableData={currentDB.financialOverview.profitLossData}
+            />
           </Container>
         </div>
       </div>

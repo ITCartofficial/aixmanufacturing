@@ -1,7 +1,14 @@
-import Container from "../../../components/common/Container";
-import { statusColors, tasks } from "../../../lib/DashboardData";
+import Container from "@/components/common/Container";
+import formatDate from "@/utils/formatDate.js"
 
-const TaskStatusDash = () => {
+const TaskStatusDash = ({ tableData = [], row = 4 }) => {
+  const statusColors = {
+    "In Progress": "bg-[#E1F3FD] text-[#0987C0] border border-[#0987C0]",
+    Pending: "bg-[#F2E7D3] text-[#AC5F34] border border-[#AC5F34]",
+    Scheduled: "bg-[#F9EAF5] text-[#C43E8A] border border-[#C43E8A]",
+    Completed: "bg-[#DBFDEC] text-[#10A95C] border border-[#10A95C]",
+  };
+
   return (
     <Container
       className="col-span-5"
@@ -20,11 +27,14 @@ const TaskStatusDash = () => {
             </tr>
           </thead>
           <tbody className="text-left">
-            {tasks.map((task, index) => (
-              <tr key={index} className="border-b last:border-none text-[#4B4B4B] font-medium">
-                <td className="px-4 py-4">{task.task}</td>
-                <td className="px-4 py-4">{task.assignee}</td>
-                <td className="px-4 py-4">{task.due}</td>
+            {tableData.slice(0, row).map((task, index) => (
+              <tr
+                key={index}
+                className="border-b last:border-none text-[#4B4B4B] font-medium"
+              >
+                <td className="px-4 py-4">{task.name}</td>
+                <td className="px-4 py-4">{task.assignedTo}</td>
+                <td className="px-4 py-4">{formatDate(task.dueDate)}</td>
                 <td className="px-4 py-3">
                   <span
                     className={`inline-block px-3 py-1 rounded-[5px] text-xs font-medium ${

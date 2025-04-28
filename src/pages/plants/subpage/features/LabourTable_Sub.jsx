@@ -1,26 +1,4 @@
 const LabourTable_Sub = ({ data }) => {
-  // const labourData = [
-  //   {
-  //     name: "Arun Joshi",
-  //     role: "Maintenance Eng.",
-  //     tasks: 3,
-  //     status: "On Duty",
-  //   },
-  //   {
-  //     name: "Tanvi Mishra",
-  //     role: "Admin Coordinator",
-  //     tasks: 0,
-  //     status: "Leave",
-  //   },
-  //   { name: "Sneha Patil", role: "Floor Supervisor", tasks: 2, status: "Out" },
-  //   {
-  //     name: "Priya Shetty",
-  //     role: "Inventory Manager",
-  //     tasks: 3,
-  //     status: "Scheduled",
-  //   },
-  // ];
-
   const labourData = data;
 
   const statusStyles = {
@@ -36,7 +14,7 @@ const LabourTable_Sub = ({ data }) => {
           <tr>
             <th className="px-4 py-4">Name</th>
             <th className="px-4 py-4">Role</th>
-            <th className="px-4 py-4">Tasks Assigned</th>
+            <th className="px-4 py-4">Tasks</th>
             <th className="px-4 py-4">Status</th>
           </tr>
         </thead>

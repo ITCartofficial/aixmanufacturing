@@ -49,57 +49,57 @@
         {
           "id": 101,
           "name": "CNC Milling 3000",
-          "status": "operational",
+          "status": "Operational",
           "lastMaintenance": "03-20-2025",
           "nextMaintenance": "06-20-2025",
           "utilization": 91.2,
           "temp": "89",
           "vibration": "0.8",
-          "image": "@/assets/MachineSnapshot.png"
+          "image": "https://images.pexels.com/photos/190574/pexels-photo-190574.jpeg"
         },
         {
           "id": 102,
           "name": "CNC Lathe 2000",
-          "status": "operational",
+          "status": "N/A",
           "lastMaintenance": "03-20-2025",
           "nextMaintenance": "06-20-2025",
           "utilization": 85.4,
           "temp": "92",
           "vibration": "0.7",
-          "image": "@/assets/MachineSnapshot.png"
+          "image": "https://www.zintilon.com/wp-content/uploads/2024/01/Rows-of-advanced-CNC-machines-in-a-modern-machine-shop.png"
         },
         {
           "id": 103,
           "name": "3D Printer Pro X",
-          "status": "operational",
+          "status": "Operational",
           "lastMaintenance": "03-20-2025",
           "nextMaintenance": "06-20-2025",
           "utilization": 78.9,
           "temp": "95",
           "vibration": "0.6",
-          "image": "@/assets/MachineSnapshot.png"
+          "image": "https://img.machinedesign.com/files/base/ebm/machinedesign/image/2019/05/machinedesign_com_sites_machinedesign.com_files_1._Heavy_Machines.png"
         },
         {
           "id": 104,
           "name": "Laser Cutter 5000",
-          "status": "operational",
+          "status": "Operational",
           "lastMaintenance": "03-20-2025",
           "nextMaintenance": "06-20-2025",
           "utilization": 82.1,
           "temp": "88",
           "vibration": "0.9",
-          "image": "@/assets/MachineSnapshot.png"
+          "image": "https://cdn.pixabay.com/photo/2018/03/08/17/35/milling-cutters-3209230_640.jpg"
         },
         {
           "id": 105,
           "name": "Injection Molding 4000",
-          "status": "operational",
+          "status": "Operational",
           "lastMaintenance": "03-20-2025",
           "nextMaintenance": "06-20-2025",
           "utilization": 90.3,
           "temp": "91",
           "vibration": "0.8",
-          "image": "@/assets/MachineSnapshot.png"
+          "image": "https://img.freepik.com/free-photo/process-smoothing-interior-cylinder_60438-3929.jpg?"
         }
       ]
     },
@@ -156,42 +156,42 @@
         {
           "id": 1,
           "name": "Replace motor (BX-450)",
-          "status": "completed",
+          "status": "Completed",
           "assignedTo": "Arun Joshi",
           "dueDate": "2025-03-20"
         },
         {
           "id": 2,
           "name": "Inspect CNC Lathe",
-          "status": "in progress",
+          "status": "In Progress",
           "assignedTo": "Priya Sharma",
           "dueDate": "2025-03-22"
         },
         {
           "id": 3,
           "name": "Calibrate 3D Printer",
-          "status": "pending",
+          "status": "Pending",
           "assignedTo": "Ravi Kumar",
           "dueDate": "2025-03-25"
         },
         {
           "id": 4,
           "name": "Clean Laser Cutter",
-          "status": "scheduled",
+          "status": "Scheduled",
           "assignedTo": "Sita Devi",
           "dueDate": "2025-03-18"
         },
         {
           "id": 5,
           "name": "Update software (IM-4000)",
-          "status": "in progress",
+          "status": "In Progress",
           "assignedTo": "Rahul Singh",
           "dueDate": "2025-03-21"
         },
         {
           "id": 6,
           "name": "Schedule maintenance meeting",
-          "status": "pending",
+          "status": "Pending",
           "assignedTo": "Anjali Verma",
           "dueDate": null
         }
@@ -202,45 +202,83 @@
       "data": [
         {
           "id": 1,
-          "machine": "Predictive Maintenance",
+          "machine": "CNC Lathe #3",
+          "plant": "Orion Plant",
           "suggestedAction": "Schedule Immediate Maintenance",
-          "alertType": "temp strike",
-          "riskLevel": "high"
+          "alertType": "Temp Strike",
+          "riskLevel": "High"
         },
         {
           "id": 2,
-          "machine": "CNC Lathe 2000",
-          "suggestedAction": "Check coolant levels",
-          "alertType": "low coolant",
-          "riskLevel": "medium"
+          "machine": "Conveyor Motor #2",
+          "plant": "Orion Plant",
+          "suggestedAction": "Reduce Load & Inspect Fan System",
+          "alertType": "Overheating Detected",
+          "riskLevel": "High"
         },
         {
           "id": 3,
-          "machine": "3D Printer Pro X",
-          "suggestedAction": "Replace filament",
-          "alertType": "material shortage",
-          "riskLevel": "low"
+          "machine": "Welding Robot #7",
+          "plant": "Orion Plant",
+          "suggestedAction": "Calibrate Sensors and Check Power Supply",
+          "alertType": "Voltage Fluctuation",
+          "riskLevel": "Medium"
         },
         {
           "id": 4,
-          "machine": "Laser Cutter 5000",
-          "suggestedAction": "Clean lens",
-          "alertType": "performance drop",
-          "riskLevel": "medium"
+          "machine": "Hydraulic Press #1",
+          "plant": "Orion Plant",
+          "suggestedAction": "Inspect Hydraulic System for Leaks",
+          "alertType": "Pressure Drop",
+          "riskLevel": "High"
         },
         {
           "id": 5,
-          "machine": "Injection Molding 4000",
-          "suggestedAction": "Check hydraulic fluid",
-          "alertType": "fluid level low",
-          "riskLevel": "high"
+          "machine": "3D Printer #5",
+          "plant": "Orion Plant",
+          "suggestedAction": "Replace Nozzle and Reset Software",
+          "alertType": "Material Jam",
+          "riskLevel": "Medium"
         },
         {
           "id": 6,
-          "machine": "CNC Milling 3000",
-          "suggestedAction": "Inspect spindle",
-          "alertType": "vibration spike",
-          "riskLevel": "medium"
+          "machine": "Assembly Line #4",
+          "plant": "Orion Plant",
+          "suggestedAction": "Tighten Conveyor Belts and Lubricate",
+          "alertType": "Belt Slippage",
+          "riskLevel": "Low"
+        },
+        {
+          "id": 7,
+          "machine": "Cooling System #2",
+          "plant": "Orion Plant",
+          "suggestedAction": "Inspect Coolant Levels and Filters",
+          "alertType": "Cooling Inefficiency",
+          "riskLevel": "Medium"
+        },
+        {
+          "id": 8,
+          "machine": "Laser Cutter #9",
+          "plant": "Orion Plant",
+          "suggestedAction": "Clean Lens and Align Beam",
+          "alertType": "Precision Deviation",
+          "riskLevel": "Medium"
+        },
+        {
+          "id": 9,
+          "machine": "Packaging Robot #6",
+          "plant": "Orion Plant",
+          "suggestedAction": "Update Firmware and Test Movement",
+          "alertType": "Sync Error",
+          "riskLevel": "Low"
+        },
+        {
+          "id": 10,
+          "machine": "Injection Molder #12",
+          "plant": "Orion Plant",
+          "suggestedAction": "Inspect Heater Bands and Calibrate Temp",
+          "alertType": "Temperature Instability",
+          "riskLevel": "High"
         }
       ]
     },
@@ -338,6 +376,326 @@
           "category": "IT",
           "amount": 80000,
           "profitLoss": -10000,
+          "trend": "down"
+        }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "name": "Zephyr Works",
+    "machine": 72,
+    "labour": 54,
+    "oee": 85.7,
+    "downtime": "2h 10m",
+    "lastActivity": "30 min ago",
+    "financialStatus": "+$3,780",
+    "financialTrend": "up",
+    "matrics": {
+      "machines": 45,
+      "labour": 38,
+      "oee": 86.5,
+      "budgetDeviation": 9500,
+      "operationalStatus": "Operational",
+      "trend": "positive"
+    },
+    "digitalTwinView": {
+      "name": "Digital Twin View",
+      "tabs": [
+        {
+          "key": "overall",
+          "label": "Overall View",
+          "img": "@/assets/factory-overall.png"
+        },
+        {
+          "key": "assemblyArea",
+          "label": "Assembly Area",
+          "img": "@/assets/assembly_floor.png"
+        },
+        {
+          "key": "productionArea",
+          "label": "Production Floor",
+          "img": "@/assets/production_floor.png"
+        },
+        {
+          "key": "storageArea",
+          "label": "Warehouse Storage",
+          "img": "@/assets/warehouse_storage.png"
+        }
+      ]
+    },
+    "machineSnapshot": {
+      "name": "Machine Snapshot",
+      "data": [
+        {
+          "id": 201,
+          "name": "Hydraulic Press X7",
+          "status": "operational",
+          "lastMaintenance": "04-01-2025",
+          "nextMaintenance": "07-01-2025",
+          "utilization": 87.6,
+          "temp": "86",
+          "vibration": "0.7",
+          "image": "https://images.pexels.com/photos/190574/pexels-photo-190574.jpeg"
+        },
+        {
+          "id": 202,
+          "name": "Robotic Arm Z300",
+          "status": "operational",
+          "lastMaintenance": "04-03-2025",
+          "nextMaintenance": "07-03-2025",
+          "utilization": 81.4,
+          "temp": "90",
+          "vibration": "0.9",
+          "image": "https://img.machinedesign.com/files/base/ebm/machinedesign/image/2019/05/machinedesign_com_sites_machinedesign.com_files_1._Heavy_Machines.png"
+        },
+        {
+          "id": 203,
+          "name": "Smart Welding Unit",
+          "status": "operational",
+          "lastMaintenance": "04-05-2025",
+          "nextMaintenance": "07-05-2025",
+          "utilization": 79.2,
+          "temp": "94",
+          "vibration": "0.5",
+          "image": "https://images.pexels.com/photos/190574/pexels-photo-190574.jpeg"
+        },
+        {
+          "id": 204,
+          "name": "Precision Grinder V2",
+          "status": "operational",
+          "lastMaintenance": "04-02-2025",
+          "nextMaintenance": "07-02-2025",
+          "utilization": 83.7,
+          "temp": "88",
+          "vibration": "0.8",
+          "image": "https://img.machinedesign.com/files/base/ebm/machinedesign/image/2019/05/machinedesign_com_sites_machinedesign.com_files_1._Heavy_Machines.png"
+        },
+        {
+          "id": 205,
+          "name": "Packaging Line A1",
+          "status": "operational",
+          "lastMaintenance": "04-04-2025",
+          "nextMaintenance": "07-04-2025",
+          "utilization": 89.1,
+          "temp": "87",
+          "vibration": "0.6",
+          "image": "https://images.pexels.com/photos/190574/pexels-photo-190574.jpeg"
+        }
+      ]
+    },
+    "labourOverview": {
+      "name": "Labour Overview",
+      "data": [
+        {
+          "id": 1,
+          "name": "Vikram Patil",
+          "role": "Maintenance Engineer",
+          "taskAssigned": 4,
+          "status": "on duty"
+        },
+        {
+          "id": 2,
+          "name": "Neha Reddy",
+          "role": "Production Lead",
+          "taskAssigned": 5,
+          "status": "on duty"
+        },
+        {
+          "id": 3,
+          "name": "Manish Gupta",
+          "role": "Quality Supervisor",
+          "taskAssigned": 3,
+          "status": "out"
+        },
+        {
+          "id": 4,
+          "name": "Sunita Yadav",
+          "role": "Assembly Technician",
+          "taskAssigned": 6,
+          "status": "scheduled"
+        },
+        {
+          "id": 5,
+          "name": "Amit Deshmukh",
+          "role": "Logistics Officer",
+          "taskAssigned": 2,
+          "status": "on duty"
+        },
+        {
+          "id": 6,
+          "name": "Kavita Nair",
+          "role": "Admin Manager",
+          "taskAssigned": 1,
+          "status": "on duty"
+        }
+      ]
+    },
+    "taskStatus": {
+      "name": "Task Status",
+      "data": [
+        {
+          "id": 1,
+          "name": "Oil Change for Press X7",
+          "status": "Completed",
+          "assignedTo": "Vikram Patil",
+          "dueDate": "2025-04-10"
+        },
+        {
+          "id": 2,
+          "name": "Weld Testing Unit Setup",
+          "status": "In Progress",
+          "assignedTo": "Neha Reddy",
+          "dueDate": "2025-04-12"
+        },
+        {
+          "id": 3,
+          "name": "Calibration of Grinder V2",
+          "status": "Pending",
+          "assignedTo": "Manish Gupta",
+          "dueDate": "2025-04-15"
+        },
+        {
+          "id": 4,
+          "name": "Clean Robotic Arms",
+          "status": "Scheduled",
+          "assignedTo": "Sunita Yadav",
+          "dueDate": "2025-04-09"
+        },
+        {
+          "id": 5,
+          "name": "Optimize Packaging Line",
+          "status": "In Progress",
+          "assignedTo": "Amit Deshmukh",
+          "dueDate": "2025-04-11"
+        },
+        {
+          "id": 6,
+          "name": "Staff Training Session",
+          "status": "Pending",
+          "assignedTo": "Kavita Nair",
+          "dueDate": null
+        }
+      ]
+    },
+    "aiInsights": {
+      "name": "AI Insights",
+      "data": [
+        {
+          "id": 1,
+          "machine": "Hydraulic Press X7",
+          "plant": "Zephyr Works",
+          "suggestedAction": "Check Hydraulic Fluid Levels",
+          "alertType": "Low Fluid",
+          "riskLevel": "Medium"
+        },
+        {
+          "id": 2,
+          "machine": "Smart Welding Unit",
+          "plant": "Zephyr Works",
+          "suggestedAction": "Inspect Welding Torches",
+          "alertType": "Torch Degradation",
+          "riskLevel": "High"
+        },
+        {
+          "id": 3,
+          "machine": "Robotic Arm Z300",
+          "plant": "Zephyr Works",
+          "suggestedAction": "Lubricate Joints",
+          "alertType": "Friction Rise",
+          "riskLevel": "Medium"
+        },
+        {
+          "id": 4,
+          "machine": "Precision Grinder V2",
+          "plant": "Zephyr Works",
+          "suggestedAction": "Balance Grinding Wheels",
+          "alertType": "Vibration Spike",
+          "riskLevel": "High"
+        },
+        {
+          "id": 5,
+          "machine": "Packaging Line A1",
+          "plant": "Zephyr Works",
+          "suggestedAction": "Realign Conveyor Belts",
+          "alertType": "Alignment Error",
+          "riskLevel": "Low"
+        }
+      ]
+    },
+    "financialOverview": {
+      "name": "Financial Overview",
+      "overview": [
+        {
+          "id": 1,
+          "name": "Q1",
+          "spend": 45000,
+          "profit": 68000,
+          "date": "17 Sun"
+        },
+        {
+          "id": 2,
+          "name": "Q2",
+          "spend": 75000,
+          "profit": 52000,
+          "date": "18 Mon"
+        },
+        {
+          "id": 3,
+          "name": "Q3",
+          "spend": 67000,
+          "profit": 88000,
+          "date": "19 Tue"
+        },
+        {
+          "id": 4,
+          "name": "Q4",
+          "spend": 72000,
+          "profit": 95000,
+          "date": "20 Wed"
+        }
+      ],
+      "profitLossData": [
+        {
+          "id": 1,
+          "category": "Manufacturing",
+          "amount": 520000,
+          "profitLoss": 180000,
+          "trend": "up"
+        },
+        {
+          "id": 2,
+          "category": "Maintenance",
+          "amount": 210000,
+          "profitLoss": -30000,
+          "trend": "down"
+        },
+        {
+          "id": 3,
+          "category": "Assembly",
+          "amount": 280000,
+          "profitLoss": 90000,
+          "trend": "up"
+        },
+        {
+          "id": 4,
+          "category": "Logistics",
+          "amount": 170000,
+          "profitLoss": -15000,
+          "trend": "down"
+        },
+        {
+          "id": 5,
+          "category": "HR",
+          "amount": 120000,
+          "profitLoss": 60000,
+          "trend": "up"
+        },
+        {
+          "id": 6,
+          "category": "IT & Automation",
+          "amount": 95000,
+          "profitLoss": -5000,
           "trend": "down"
         }
       ]

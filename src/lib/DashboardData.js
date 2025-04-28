@@ -23,37 +23,30 @@ export const units = [
 
 export const tasks = [
   {
-    task: "Replace motor (BX-450)",
-    assignee: "Raj (Engineer)",
-    due: "14 Apr, 2025",
+    name: "Replace motor (BX-450)",
+    assignedTo: "Raj (Engineer)",
+    dueDate: "14 Apr, 2025",
     status: "In Progress",
   },
   {
-    task: "Inspect Nozzies",
-    assignee: "Sunil (Maintena)",
-    due: "14 Apr, 2025",
+    name: "Inspect Nozzies",
+    assignedTo: "Sunil (Maintena)",
+    dueDate: "14 Apr, 2025",
     status: "Pending",
   },
   {
-    task: "Refill Coolant (CX-120)",
-    assignee: "Alia (Engineer)",
-    due: "16 Apr, 2025",
+    name: "Refill Coolant (CX-120)",
+    assignedTo: "Alia (Engineer)",
+    dueDate: "16 Apr, 2025",
     status: "Scheduled",
   },
   {
-    task: "Refill Coolant (CX-128)",
-    assignee: "Raj (Engineer)",
-    due: "14 Apr, 2025",
+    name: "Refill Coolant (CX-128)",
+    assignedTo: "Raj (Engineer)",
+    dueDate: "14 Apr, 2025",
     status: "Completed",
   },
 ];
-
-export const statusColors = {
-  "In Progress": "bg-[#E1F3FD] text-[#0987C0] border border-[#0987C0]",
-  Pending: "bg-[#F2E7D3] text-[#AC5F34] border border-[#AC5F34]",
-  Scheduled: "bg-[#F9EAF5] text-[#C43E8A] border border-[#C43E8A]",
-  Completed: "bg-[#DBFDEC] text-[#10A95C] border border-[#10A95C]",
-};
 
 export const inventoryData = [
   { category: "Spare Parts", inStock: 89, lowStock: 9, restocking: 4 },
@@ -62,42 +55,36 @@ export const inventoryData = [
   { category: "Consumables", inStock: 58, lowStock: 2, restocking: 1 },
 ];
 
-export const data = [
+export const aiTable = [
   {
     machine: "CNC Lathe #3",
-    plat: "Orion Plant",
-    alert: "Temp Strike",
-    risk: "High",
-    action: "Schedule Immediate Maintenance",
+    plant: "Orion Plant",
+    alertType: "Temp Strike",
+    riskLevel: "High",
+    suggestedAction: "Schedule Immediate Maintenance",
   },
   {
     machine: "Conveyor Motor #",
-    plat: "Zephyr Works",
-    alert: "Overheating Detected",
-    risk: "High",
-    action: "Reduce Load & Inspect Fan System",
+    plant: "Zephyr Works",
+    alertType: "Overheating Detected",
+    riskLevel: "High",
+    suggestedAction: "Reduce Load & Inspect Fan System",
   },
   {
     machine: "Robotic Arm #2",
-    plat: "Titan Foundry",
-    alert: "Predictive Part Failure",
-    risk: "Medium",
-    action: "Pre-order Replacement Part",
+    plant: "Titan Foundry",
+    alertType: "Predictive Part Failure",
+    riskLevel: "Medium",
+    suggestedAction: "Pre-order Replacement Part",
   },
   {
     machine: "Welding Machine #5",
-    plat: "Nexa Hub",
-    alert: "Power Fluctuation Pattern",
-    risk: "Low",
-    action: "Monitor Continuously",
+    plant: "Nexa Hub",
+    alertType: "Power Fluctuation Pattern",
+    riskLevel: "Low",
+    suggestedAction: "Monitor Continuously",
   },
 ];
-
-export const riskLevelStyle = {
-  High: "bg-[#F64C4C] text-white",
-  Medium: "bg-[#FFAD0D] text-white",
-  Low: "bg-[#47B881] text-white",
-};
 
 export const alertStyles = {
   danger: "border-[#F64C4C] bg-red-50 text-red-700",

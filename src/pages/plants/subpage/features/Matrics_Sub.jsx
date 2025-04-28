@@ -17,7 +17,6 @@ const Matrics_Sub = ({ matrics }) => {
       title: "labour",
       value: matrics.labour,
       icon: GearIcon,
-      statusIndicator: { type: "dot", color: "orange" },
     },
     {
       title: "OEE",
@@ -35,6 +34,7 @@ const Matrics_Sub = ({ matrics }) => {
       title: "Operational Status",
       value: matrics.operationalStatus,
       icon: SettingsIcon,
+      statusIndicator: { type: "dot", color: matrics.operationalStatus == "Operational" ? "green" : "orange" }
     },
   ];
 

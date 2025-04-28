@@ -1,9 +1,14 @@
 import React from "react";
-import { data, riskLevelStyle } from "../../../lib/DashboardData";
 import Container from "../../../components/common/Container";
 import { IoWarning } from "react-icons/io5";
 
-const AiInsidesDash = () => {
+const AiInsidesDash = ({ tableData, isPlant=true, row=4 }) => {
+  const riskLevelStyle = {
+    High: "bg-[#F64C4C] text-white",
+    Medium: "bg-[#FFAD0D] text-white",
+    Low: "bg-[#47B881] text-white",
+  };
+
   return (
     <Container
       className="col-span-6 h-full"
@@ -16,29 +21,32 @@ const AiInsidesDash = () => {
           <thead className="bg-[#EEF2FF] text-black">
             <tr>
               <th className="px-4 py-3">Machine</th>
-              <th className="px-4 py-3">Plat</th>
+              {isPlant && <th className="px-4 py-3">Plant</th>}
               <th className="px-4 py-3">AI Alert Type</th>
               <th className="px-4 py-3">Risk Level</th>
               <th className="px-4 py-3">Suggested Action</th>
             </tr>
           </thead>
           <tbody>
-            {data.map((item, idx) => (
-              <tr key={idx} className="border-b last:border-none text-[#4B4B4B] font-medium">
+            {tableData.slice(0, row).map((item, idx) => (
+              <tr
+                key={idx}
+                className="border-b last:border-none text-[#4B4B4B] font-medium"
+              >
                 <td className="px-4 py-2">{item.machine}</td>
-                <td className="px-4 py-2">{item.plat}</td>
-                <td className="px-4 py-2">{item.alert}</td>
+                {isPlant && <td className="px-4 py-2">{item.plant}</td>}
+                <td className="px-4 py-2">{item.alertType}</td>
                 <td className="px-4 py-2">
                   <div
                     className={`flex gap-2 items-center px-2 py-1 border rounded font-medium grow-0 w-min ${
-                      riskLevelStyle[item.risk]
+                      riskLevelStyle[item.riskLevel]
                     }`}
                   >
                     <IoWarning className="text-white text-16" />
-                    <span className="text-[16px]">{item.risk}</span>
+                    <span className="text-[16px]">{item.riskLevel}</span>
                   </div>
                 </td>
-                <td className="px-4 py-2">{item.action}</td>
+                <td className="px-4 py-2">{item.suggestedAction}</td>
               </tr>
             ))}
           </tbody>
