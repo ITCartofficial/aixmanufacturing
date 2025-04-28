@@ -1,4 +1,4 @@
-export function textCapitalize(str) {
+export default function textCapitalize(str) {
   str = str.split("_").join(" ");
   return str
     .split(" ")

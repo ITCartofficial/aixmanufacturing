@@ -5,6 +5,7 @@ import GearIcon from "@/assets/icons/gear.png";
 import SettingsIcon from "@/assets/icons/settings.png";
 import StatCard from "@/components/common/StatCard";
 import formatCurrency from "@/utils/formatCurrency";
+import textCapitalize from "@/utils/textCapitalize";
 
 const Matrics_Sub = ({ matrics }) => {
   const cards = [
@@ -44,7 +45,7 @@ const Matrics_Sub = ({ matrics }) => {
         return (
           <StatCard
             key={index}
-            title={card.title}
+            title={textCapitalize(card.title)}
             value={card.value}
             icon={card.icon}
             statusIndicator={card.statusIndicator}
