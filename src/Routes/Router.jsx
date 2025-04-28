@@ -4,6 +4,7 @@ import Dashboard from '../pages/dashboard/Dashboard'
 import Plants from '../pages/plants/Plants'
 import Machines from '../pages/machines/Machines'
 import Sub_Plants from '../pages/plants/subpage/Sub_Plants'
+import MachineDetails from '../pages/machines/subpage/MachineDetails'
 
 const Router = () => {
   return (
@@ -12,7 +13,7 @@ const Router = () => {
         <Route path="/plants" element={<Plants />} />
         <Route path="/machines" element={<Machines />} />
         <Route path="plants/:plantId/:slug" element={<Sub_Plants />} />
-        {/* <Route path="plants/:plantId/:slug" element={<Sub_Plants />} /> */}
+        <Route path="machines/:machineId/:slug" element={<MachineDetails />} />
       </Routes>
   )
 }

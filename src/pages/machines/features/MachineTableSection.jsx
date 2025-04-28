@@ -9,6 +9,8 @@ import OrangeCautionIcon from "../../../assets/icons/caution-orange.svg";
 import {FiEye, FiTrash2} from "react-icons/fi";
 import {MdModeEdit} from "react-icons/md";
 import {allMachines} from "../../../lib/machinesData";
+import { Link } from "react-router";
+import { textToSlug } from "../../../utils/textToSlug";
 
 const MachineTableSection = () => {
   const tabs = ["All Machines", "Operational", "Warning", "Critical"];
@@ -154,9 +156,9 @@ const MachineTableSection = () => {
       </td>
       <td className="p-2">
         <div className="flex space-x-2">
-          <button className="text-[#3B82F6]">
+          <Link to={`/machines/${machine.id}/${textToSlug(machine.name)}`} className="text-[#3B82F6]">
             <FiEye className="h-5 w-5" />
-          </button>
+          </Link>
           <button className="text-black">
             <MdModeEdit className="h-5 w-5" />
           </button>

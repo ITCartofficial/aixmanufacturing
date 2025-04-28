@@ -21,6 +21,8 @@ const StatsOverview = ({ stats, filterOptions, selectedFilter, onFilterChange })
           value={stat.value}
           icon={stat.icon}
           statusIndicator={stat.statusIndicator}
+          valueClassName="text-3xl font-bold text-black"
+          titleClassName="text-base font-semibold"
         />
       ))}
     </div>
