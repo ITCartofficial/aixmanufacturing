@@ -13,7 +13,7 @@ const Sidebar = ({ sidebar }) => {
     { to: "/", icon: <MdSpaceDashboard />, label: "Dashboard" },
     { to: "/plants", icon: <FaIndustry />, label: "Plants" },
     { to: "/machines", icon: <GiCargoCrane />, label: "Machines" },
-    { to: "/labour", icon: <MdEngineering />, label: "Labour" },
+    { to: "/labor", icon: <MdEngineering />, label: "Labour" },
     { to: "/task-hub", icon: <MdTask />, label: "Task Hub" },
     { to: "/inventory", icon: <IoCube />, label: "Inventory" },
     { to: "/finance", icon: <FaBusinessTime />, label: "Finance" },
