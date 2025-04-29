@@ -14,7 +14,7 @@ const Table = ({
   selectedRows = {},
   onSelectRow = () => {},
   onSelectAll = () => {},
-  headerColor = "#8E8E8E"
+  headerColor = ""
 }) => {
   const [sortField, setSortField] = useState(initialSortField);
   const [sortDirection, setSortDirection] = useState(initialSortDirection);
