@@ -5,5 +5,5 @@ export default function getUserDetails(key = "") {
 
   const user = users.find((user) => user.id === id);
 
-  return user;
+  return { ...user, fullName: user.firstName + " " + user.lastName };
 }

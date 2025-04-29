@@ -12,7 +12,7 @@ import { aiTable, tasks } from "../../lib/DashboardData";
 const Dashboard = () => {
   return (
     <>
-      <TitleBar title={"Hello John,"} Desc="Welcome to AiXManufacturing" fillBtn={"Export"} />
+      <TitleBar title={"Hello Admin,"} Desc="Welcome to AiXManufacturing" fillBtn={"Export"} />
 
       <OverviewDash />
       <TrendGraphDash />

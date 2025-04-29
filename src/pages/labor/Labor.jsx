@@ -4,6 +4,8 @@ import LaborStats from "./features/LaborStats";
 import { laborStats } from "../../lib/laborData";
 import Container from "../../components/common/Container";
 import PlantsTable from "../plants/features/PlantsTable";
+import LaborTableData from "@/lib/LaborTableData.json";
+import LaborStatsTable from "./features/LaborStatsTable";
 
 const Labor = () => {
   return (
@@ -12,7 +14,7 @@ const Labor = () => {
       <Container id="overviewDashboard" label={"Overview"} dropDown={true}>
         <LaborStats matrics={laborStats} />
       </Container>
-      <PlantsTable />
+      <LaborStatsTable tableData={LaborTableData} />
     </div>
   );
 };

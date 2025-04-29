@@ -1,0 +1,92 @@
+[
+  {
+    "id": "8f47a150-1b9a-4de6-9250-3a8f47dd19b1",
+    "user": "user-1",
+    "plant": "Orion Precision Works",
+    "shift": "Morning",
+    "tasks": 3,
+    "status": "On Duty",
+    "productivity": "88"
+  },
+  {
+    "id": "1fbd26c5-0a4e-491d-8a42-c7cc9fd6b1de",
+    "user": "user-2",
+    "plant": "Titan Foundry",
+    "shift": "NA",
+    "tasks": 0,
+    "status": "Leave",
+    "productivity": ""
+  },
+  {
+    "id": "65cbb52f-881b-41f3-b7aa-f15f1b7fa6a6",
+    "user": "user-3",
+    "plant": "Stellar CastTech",
+    "shift": "Evening",
+    "tasks": 2,
+    "status": "Scheduled",
+    "productivity": "82"
+  },
+  {
+    "id": "94b87c8d-f684-4fcb-bd23-b20200bb8db2",
+    "user": "user-4",
+    "plant": "Orion Precision Works",
+    "shift": "Morning",
+    "tasks": 2,
+    "status": "Out",
+    "productivity": "72"
+  },
+  {
+    "id": "dbbeaa7f-d305-4c44-946e-c56373f40f71",
+    "user": "user-5",
+    "plant": "Nova Steel Works",
+    "shift": "Night",
+    "tasks": 4,
+    "status": "On Duty",
+    "productivity": "90"
+  },
+  {
+    "id": "267fda42-95cb-4532-b792-65084209837b",
+    "user": "user-6",
+    "plant": "Titan Foundry",
+    "shift": "Morning",
+    "tasks": 1,
+    "status": "On Duty",
+    "productivity": "84"
+  },
+  {
+    "id": "bc4d098b-d8a1-44e5-b45e-78cbfa5b4455",
+    "user": "user-7",
+    "plant": "Nova Steel Works",
+    "shift": "Morning",
+    "tasks": 2,
+    "status": "Scheduled",
+    "productivity": "86"
+  },
+  {
+    "id": "ec6a4b2d-f54e-4f02-94c2-69f54ff55f0c",
+    "user": "user-8",
+    "plant": "Stellar CastTech",
+    "shift": "Evening",
+    "tasks": 3,
+    "status": "On Duty",
+    "productivity": "80"
+  },
+  {
+    "id": "39d7f2cb-fbb8-4b58-9914-940dfac17b91",
+    "user": "user-9",
+    "plant": "Titan Foundry",
+    "shift": "Morning",
+    "tasks": 1,
+    "status": "On Duty",
+    "productivity": "84"
+  },
+  {
+    "id": "3a8479b4-9d90-434c-8cb9-268c56cd1945",
+    "user": "user-10",
+    "plant": "Orion Precision Works",
+    "shift": "NA",
+    "tasks": 0,
+    "status": "Leave",
+    "productivity": ""
+  }
+]

@@ -13,7 +13,8 @@ const Table = ({
   onSortChange = () => {},
   selectedRows = {},
   onSelectRow = () => {},
-  onSelectAll = () => {}
+  onSelectAll = () => {},
+  headerColor = "#8E8E8E"
 }) => {
   const [sortField, setSortField] = useState(initialSortField);
   const [sortDirection, setSortDirection] = useState(initialSortDirection);
@@ -56,11 +57,11 @@ const Table = ({
   };
 
   return (
-    <div className="w-full bg-gray-50 p-2 rounded">
+    <div className="w-full bg-gray-50 rounded-[10px] overflow-hidden">
       <div className="overflow-x-auto">
         <table className="min-w-full">
           <thead>
-            <tr className="border-b text-sm">
+            <tr className={`border-b text-sm bg-[${headerColor}]`}>
               {columns.map((column, index) => (
                 <th key={index} className={`py-3 px-2.5 text-left font-bold text-black ${column.widthClass || ''}`}>
                   {column.type === 'checkbox' ? (
