@@ -42,8 +42,8 @@ const Header = ({ setsb, notiCount = true }) => {
         </div>
 
         <ProfileSection
-          name="Numan"
-          role="Software Engineer II"
+          name="Admin"
+          role="Administrator"
           imageUrl={defaultUser}
         />
       </div>
