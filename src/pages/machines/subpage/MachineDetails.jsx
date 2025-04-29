@@ -18,6 +18,7 @@ import machineBg from "../../../assets/Digital-Twin-Background.png";
 import machineImage from "../../../assets/MachineSnapshot.png";
 import MachineStatus from "./features/MachineStatus";
 import AiInsidesDash from "../../dashboard/features/AiInsidesDash";
+import { aiTable } from "../../../lib/DashboardData";
 
 const labelMap = {
   id: "Machine ID",
@@ -162,7 +163,7 @@ const MachineDetails = ({selectedFilter, onFilterChange}) => {
 
       <div className="grid grid-cols-1 lg:grid-cols-10 gap-4">
         <div className="grid col-span-5">
-          <AiInsidesDash />
+        <AiInsidesDash tableData={aiTable} isPlant={false} isMachine={false} />
         </div>
       </div>
     </div>

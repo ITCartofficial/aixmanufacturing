@@ -2,7 +2,7 @@ import React from "react";
 import Container from "../../../components/common/Container";
 import { IoWarning } from "react-icons/io5";
 
-const AiInsidesDash = ({ tableData, isPlant=true, row=4 }) => {
+const AiInsidesDash = ({ tableData, isPlant=true, row=4, isMachine=true }) => {
   const riskLevelStyle = {
     High: "bg-[#F64C4C] text-white",
     Medium: "bg-[#FFAD0D] text-white",
@@ -20,7 +20,7 @@ const AiInsidesDash = ({ tableData, isPlant=true, row=4 }) => {
         <table className="w-full table-auto text-base text-left rounded-[10px] overflow-hidden">
           <thead className="bg-[#EEF2FF] text-black">
             <tr>
-              <th className="px-4 py-3">Machine</th>
+              {isMachine && <th className="px-4 py-3">Machine</th>}
               {isPlant && <th className="px-4 py-3">Plant</th>}
               <th className="px-4 py-3">AI Alert Type</th>
               <th className="px-4 py-3">Risk Level</th>
@@ -33,7 +33,8 @@ const AiInsidesDash = ({ tableData, isPlant=true, row=4 }) => {
                 key={idx}
                 className="border-b last:border-none text-[#4B4B4B] font-medium"
               >
-                <td className="px-4 py-2">{item.machine}</td>
+                
+                {isMachine && <td className="px-4 py-2">{item.machine}</td>}
                 {isPlant && <td className="px-4 py-2">{item.plant}</td>}
                 <td className="px-4 py-2">{item.alertType}</td>
                 <td className="px-4 py-2">
