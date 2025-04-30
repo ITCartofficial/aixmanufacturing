@@ -6,6 +6,7 @@ import Machines from '../pages/machines/Machines'
 import Sub_Plants from '../pages/plants/subpage/Sub_Plants'
 import MachineDetails from '../pages/machines/subpage/MachineDetails'
 import Labor from '../pages/labor/labor'
+import Inventory from '../pages/inventory/Inventory'
 
 const Router = () => {
   return (
@@ -14,6 +15,7 @@ const Router = () => {
         <Route path="/plants" element={<Plants />} />
         <Route path="/machines" element={<Machines />} />
         <Route path="/labor" element={<Labor />} />
+        <Route path="/inventory" element={<Inventory />} />
         <Route path="plants/:plantId/:slug" element={<Sub_Plants />} />
         <Route path="machines/:machineId/:slug" element={<MachineDetails />} />
       </Routes>
