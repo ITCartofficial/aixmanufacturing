@@ -18,7 +18,7 @@ const currentDB = plantsDB[0];
 
 // console.log(plantsDB);
 
-const Sub_Plants = () => {
+const PlantsDetails = () => {
   const { plantId, slug } = useParams();
   const title = slug ? slugToTitle(slug) : "Unknown";
 
@@ -85,4 +85,4 @@ const Sub_Plants = () => {
   );
 };
 
-export default Sub_Plants;
+export default PlantsDetails;

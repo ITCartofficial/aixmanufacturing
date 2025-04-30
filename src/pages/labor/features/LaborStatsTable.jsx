@@ -7,8 +7,65 @@ import { MdModeEdit } from "react-icons/md";
 import getUserDetails from "../../../utils/getUserDetails";
 import ShowProfile from "../../../components/common/ShowProfile";
 import Pagination from "@/components/table/Pagination";
+import Dropdown from "@/components/common/Dropdown";
+import SearchInput from "@/components/common/SearchInput";
+import { textToSlug } from "../../../utils/textToSlug";
 
 const LaborStatsTable = ({ tableData = [] }) => {
+  const [search, setSearch] = useState("");
+  const statusArray = [...new Set(tableData.map((item) => item.status))];
+  const plantArray = [...new Set(tableData.map((item) => item.plant))];
+  const shiftArray = [...new Set(tableData.map((item) => item.shift))];
+
+  // If you later want to fetch role from user DB, do it via user ID (mock shown here)
+  const roleArray = [
+    ...new Set(tableData.map((item) => getUserRole(item.user))),
+  ];
+
+  // Mock function for role if needed
+  function getUserRole(userId) {
+    const roles = {
+      "user-1": "Operator",
+      "user-2": "Supervisor",
+      "user-3": "Technician",
+      "user-4": "Operator",
+      "user-5": "Supervisor",
+      "user-6": "Technician",
+      "user-7": "Operator",
+      "user-8": "Operator",
+      "user-9": "Technician",
+      "user-10": "Operator",
+    };
+    return roles[userId] || "Unknown";
+  }
+
+  const [currentFilter, setCurrentFilter] = useState(tableData);
+  const [currentStatus, setCurrentStatus] = useState("");
+  const [currentRole, setCurrentRole] = useState("");
+  const [currentPlant, setCurrentPlant] = useState("");
+  const [currentShift, setCurrentShift] = useState("");
+
+  useEffect(() => {
+    let filtered = tableData;
+
+    if (currentStatus) {
+      filtered = filtered.filter((item) => item.status === currentStatus);
+    }
+    if (currentRole) {
+      filtered = filtered.filter(
+        (item) => getUserRole(item.user) === currentRole
+      );
+    }
+    if (currentPlant) {
+      filtered = filtered.filter((item) => item.plant === currentPlant);
+    }
+    if (currentShift) {
+      filtered = filtered.filter((item) => item.shift === currentShift);
+    }
+
+    setCurrentFilter(filtered);
+  }, [currentStatus, currentRole, currentPlant, currentShift, tableData]);
+
   // Pagination and sorting state
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(10);
@@ -19,14 +76,14 @@ const LaborStatsTable = ({ tableData = [] }) => {
   const [selectedRows, setSelectedRows] = useState({});
 
   // Display plants from pagination
-  const [displayedPlants, setDisplayedPlants] = useState([]);
+  const [displayedLabor, setDisplayedLabor] = useState([]);
 
   // Handle pagination - slicing plants for the current page
   useEffect(() => {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
-    setDisplayedPlants(tableData.slice(startIndex, endIndex));
-  }, [currentPage, itemsPerPage, tableData]);
+    setDisplayedLabor(currentFilter.slice(startIndex, endIndex));
+  }, [currentPage, itemsPerPage, currentFilter]);
 
   const columns = [
     { type: "checkbox", field: "checkbox", label: "", sortable: false },
@@ -62,6 +119,8 @@ const LaborStatsTable = ({ tableData = [] }) => {
     });
     setSelectedRows(newSelected);
   };
+
+  const clearFilter = () => {};
 
   // Define custom row renderer
   const renderRow = (labor, selectedRows, onSelectRow) => (
@@ -112,7 +171,12 @@ const LaborStatsTable = ({ tableData = [] }) => {
       </td>
       <td className="p-3">
         <div className="flex space-x-2">
-          <Link to={"#"} className="text-[#3B82F6]">
+          <Link
+            to={`/labor/${labor.id}/${textToSlug(
+              getUserDetails(labor.user).fullName
+            )}`}
+            className="text-[#3B82F6]"
+          >
             <FiEye className="h-5 w-5" />
           </Link>
           <button className="text-black">
@@ -128,10 +192,52 @@ const LaborStatsTable = ({ tableData = [] }) => {
 
   return (
     <div className="w-full h-max px-4 py-8 sm:px-6 bg-white border rounded-[10px]">
-      <div className="flex items-center justify-between mb-4"></div>
+      <div className="flex items-center justify-between mb-4">
+        <div className="flex gap-3 items-center">
+          <span className="text-base font-medium text-gray-600">
+            Filter by :
+          </span>
+          <Dropdown
+            options={statusArray}
+            selectedOption={currentStatus}
+            onSelect={setCurrentStatus}
+            buttonText="Status"
+          />
+          <Dropdown
+            options={plantArray}
+            selectedOption={currentPlant}
+            onSelect={setCurrentPlant}
+            buttonText="Plants"
+          />
+          <Dropdown
+            options={shiftArray}
+            selectedOption={currentShift}
+            onSelect={setCurrentShift}
+            buttonText="Shift"
+          />
+          <Dropdown
+            options={roleArray}
+            selectedOption={currentRole}
+            onSelect={setCurrentRole}
+            buttonText="Role"
+          />
+          {currentFilter !== tableData && (
+            <button className="text-sm text-gray-600" onClick={clearFilter}>
+              Clear Filter
+            </button>
+          )}
+        </div>
+        <div className="w-60">
+          <SearchInput
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search"
+          />
+        </div>
+      </div>
       <Table
         columns={columns}
-        data={displayedPlants}
+        data={displayedLabor}
         renderRow={renderRow}
         initialSortField={sortConfig.field}
         initialSortDirection={sortConfig.direction}

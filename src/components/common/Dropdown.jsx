@@ -1,7 +1,13 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { FiChevronDown } from 'react-icons/fi';
+import React, { useState, useRef, useEffect } from "react";
+import { FiChevronDown } from "react-icons/fi";
 
-const Dropdown = ({ options, selectedOption, onSelect, buttonText }) => {
+const Dropdown = ({
+  options,
+  selectedOption,
+  onSelect,
+  buttonText,
+  className = "",
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null); // Reference for the dropdown container
 
@@ -15,11 +21,11 @@ const Dropdown = ({ options, selectedOption, onSelect, buttonText }) => {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    
+    document.addEventListener("mousedown", handleClickOutside);
+
     // Cleanup
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
@@ -27,7 +33,7 @@ const Dropdown = ({ options, selectedOption, onSelect, buttonText }) => {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={toggleDropdown}
-        className="flex items-center px-6 py-[6px] border border-gray-300 bg-white rounded-md shadow-sm text-black text-sm hover:bg-gray-100 focus:outline-none"
+        className={`flex items-center px-6 py-[6px] border border-gray-300 bg-white rounded-md shadow-sm text-black text-sm hover:bg-gray-100 focus:outline-none ${className}`}
       >
         {selectedOption || buttonText}
         <FiChevronDown className="ml-2 h-5 w-5 text-gray-500" />
