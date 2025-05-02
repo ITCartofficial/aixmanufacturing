@@ -7,6 +7,7 @@ import Sub_Plants from '../pages/plants/subpage/Sub_Plants'
 import MachineDetails from '../pages/machines/subpage/MachineDetails'
 import Labor from '../pages/labor/labor'
 import Inventory from '../pages/inventory/Inventory'
+import AiInsights from '../pages/ai-insights/AiInsights'
 
 const Router = () => {
   return (
@@ -16,6 +17,7 @@ const Router = () => {
         <Route path="/machines" element={<Machines />} />
         <Route path="/labor" element={<Labor />} />
         <Route path="/inventory" element={<Inventory />} />
+        <Route path="/ai-insights" element={<AiInsights />} />
         <Route path="plants/:plantId/:slug" element={<Sub_Plants />} />
         <Route path="machines/:machineId/:slug" element={<MachineDetails />} />
       </Routes>
