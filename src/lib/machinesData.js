@@ -159,3 +159,27 @@ export const allMachines = [
     issueFlag: "NA",
   },
 ];
+
+
+export const machineMaintenanceTable = [
+  {
+    alertType: "Temp Strike",
+    riskLevel: "High",
+    suggestedAction: "Schedule Immediate Maintenance",
+  },
+  {
+    alertType: "Overheating Detected",
+    riskLevel: "High",
+    suggestedAction: "Reduce Load & Inspect Fan System",
+  },
+  {
+    alertType: "Predictive Part Failure",
+    riskLevel: "Medium",
+    suggestedAction: "Pre-order Replacement Part",
+  },
+  {
+    alertType: "Power Fluctuation Pattern",
+    riskLevel: "High",
+    suggestedAction: "Monitor Continuously",
+  },
+];
