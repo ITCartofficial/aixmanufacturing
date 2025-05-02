@@ -3,7 +3,7 @@ import Header from "./layout/Header";
 import Sidebar from "./layout/Sidebar";
 
 const MainLayout = ({ children }) => {
-  const [sb, setsb] = useState(0);
+  const [sb, setsb] = useState(260);
   return (
     <div className="w-screen bg-[#f5f5f5] h-screen overflow-hidden">
       <Header setsb={setsb} />

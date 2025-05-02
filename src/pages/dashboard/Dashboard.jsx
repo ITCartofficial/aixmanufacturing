@@ -28,7 +28,7 @@ const Dashboard = () => {
       </div>
 
       <div className="grid grid-cols-1 xl:grid-cols-10 gap-4 items-stretch">
-        <AiInsidesDash tableData={aiTable} />
+        <AiInsidesDash tableData={aiTable} row={3} />
         <AlertNotiDash />
       </div>
     </>
