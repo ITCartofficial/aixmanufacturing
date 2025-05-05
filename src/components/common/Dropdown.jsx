@@ -1,7 +1,14 @@
 import React, { useState, useRef, useEffect } from "react";
 import { FiChevronDown } from "react-icons/fi";
 
-const Dropdown = ({ options, selectedOption, onSelect, buttonText, buttonWidth = "w-auto" }) => {
+const Dropdown = ({
+  options,
+  selectedOption,
+  onSelect,
+  buttonText,
+  className = "",
+  buttonWidth = "w-auto"
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null); // Reference for the dropdown container
 
@@ -27,7 +34,7 @@ const Dropdown = ({ options, selectedOption, onSelect, buttonText, buttonWidth =
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={toggleDropdown}
-        className={`flex items-center justify-between px-2 py-[6px] border border-gray-300  bg-white rounded-md shadow-sm text-black text-sm font-medium hover:bg-gray-100 focus:outline-none ${buttonWidth}`}
+        className={`flex items-center px-6 py-[6px] border border-gray-300 bg-white rounded-md shadow-sm text-black text-sm hover:bg-gray-100 focus:outline-none ${className || buttonWidth}`}
       >
         {selectedOption || buttonText}
         <FiChevronDown className="ml-2 h-5 w-5 text-gray-500" />
