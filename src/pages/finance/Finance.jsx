@@ -8,6 +8,8 @@ import {
   plantsFinancialData,
   expenseBreakdownByCat,
   forecastVsRevenueData,
+  budgetAlertsData,
+  smartAIRecommendations,
 } from "../../lib/financeData";
 import SearchInput from "@/components/common/SearchInput";
 
@@ -114,6 +116,33 @@ const Finance = () => {
               tableBody={forecastVsRevenueData.body}
               rows={4}
             />
+          </Container>
+        </div>
+      </div>
+      <div className="grid grid-cols-10 gap-4">
+        <div className="col-span-6">
+          <Container label="Cost Overrun Alerts">
+            <DynamicTable
+              cols={budgetAlertsData.cols}
+              tableBody={budgetAlertsData.body}
+              rows={5}
+              riskLabel={true}
+              riskCol={6}
+            />
+          </Container>
+        </div>
+        <div className="col-span-4">
+          <Container label="Smart  AI Recommendations">
+            <div className="">
+              <div className="border-[#A6B5FB] w-full h-full p-6 border-[1.5px] rounded-[10px] flex flex-col gap-4">
+                {smartAIRecommendations.slice(0, 4).map((item, i) => (
+                  <div key={i} className="flex flex-col gap-2">
+                    <h3 className="font-bold text-base text-[#000]">{item.title}</h3>
+                    <p className="text-sm text-[#1F1F1F]">{item.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </Container>
         </div>
       </div>

@@ -228,3 +228,74 @@ export const forecastVsRevenueData = {
   ],
 };
 
+export const budgetAlertsData = {
+  cols: [
+    { label: "Alert ID", key: "alertId" },
+    { label: "Area", key: "area" },
+    { label: "Budget ($)", key: "budget" },
+    { label: "Spend ($)", key: "spend" },
+    { label: "Overrun (%)", key: "overrun" },
+    { label: "Urgency", key: "urgency" },
+  ],
+  body: [
+    {
+      alertId: "AL-001",
+      area: "Maintenance",
+      budget: "750K",
+      spend: "800K",
+      overrun: "+6.6%",
+      urgency: "Medium",
+    },
+    {
+      alertId: "AL-002",
+      area: "Labor Payroll",
+      budget: "2M",
+      spend: "2.1M",
+      overrun: "+5%",
+      urgency: "High",
+    },
+    {
+      alertId: "AL-002",
+      area: "Raw Material Supply",
+      budget: "1.5M",
+      spend: "1.7M",
+      overrun: "+13.3%",
+      urgency: "High",
+    },
+    {
+      alertId: "AL-002",
+      area: "Utility Costs",
+      budget: "400K",
+      spend: "450K",
+      overrun: "+12.5%",
+      urgency: "Medium",
+    },
+    {
+      alertId: "AL-002",
+      area: "Logistics",
+      budget: "500K",
+      spend: "560K",
+      overrun: "+12%",
+      urgency: "Low",
+    },
+  ],
+};
+
+export const smartAIRecommendations = [
+  {
+    title: "Optimize Shifts",
+    description: "Reduce overtime labor costs by 15%.",
+  },
+  {
+    title: "Energy Audit Recommendation",
+    description: "Cut utility expenses by 8% using automation.",
+  },
+  {
+    title: "Vendor Contract Renegotiation",
+    description: "Save 5–7% on raw material costs.",
+  },
+  {
+    title: "Predictive Maintenance Scheduling",
+    description: "Reduce unplanned repair costs by 10%.",
+  },
+];
