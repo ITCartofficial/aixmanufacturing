@@ -20,6 +20,7 @@ const PlantsStats = ({ selectedFilter, onFilterChange }) => {
           selectedOption={selectedFilter}
           onSelect={onFilterChange}
           buttonText="Filter"
+          buttonWidth="w-40"
         />
       </div>
 

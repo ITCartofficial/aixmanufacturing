@@ -1,14 +1,14 @@
 import React from "react";
 import { Route, Routes } from "react-router";
-import Dashboard from "../pages/dashboard/Dashboard";
-import Plants from "../pages/plants/Plants";
-import Machines from "../pages/machines/Machines";
+import Dashboard from "@/pages/dashboard/Dashboard";
+import Plants from "@/pages/plants/Plants";
+import Machines from "@/pages/machines/Machines";
 import PlantsDetails from "@/pages/plants/subpage/PlantDetails";
 import MachineDetails from "@/pages/machines/subpage/MachineDetails";
 import Labor from "@/pages/labor/labor";
 import LaborAnalytics from "@/pages/labor/subpage/LaborAnalytics";
 import Inventory from '@/pages/inventory/Inventory'
-
+import AiInsights from '@/pages/ai-insights/AiInsights'
 import Finance from "@/pages/finance/Finance";
 
 const Router = () => {

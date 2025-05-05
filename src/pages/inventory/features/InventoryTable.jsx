@@ -132,6 +132,7 @@ const InventoryTable = () => {
               selectedOption={selectedPlant}
               onSelect={setSelectedPlant}
               buttonText="Plants"
+              buttonWidth="w-48"
             />
             <Dropdown
               options={stockStatusOptions}

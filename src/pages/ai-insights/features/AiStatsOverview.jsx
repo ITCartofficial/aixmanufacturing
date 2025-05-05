@@ -2,7 +2,8 @@
 import Dropdown from "../../../components/common/Dropdown";
 import StatCard from "../../../components/common/StatCard";
 
-const StatsOverview = ({ stats, filterOptions, selectedFilter, onFilterChange }) => (
+
+const AiStatsOverview = ({ stats, filterOptions, selectedFilter, onFilterChange }) => (
   <div className="w-full px-4 p-6 sm:px-6 bg-white border rounded-[10px]">
     <div className="flex items-center justify-between mb-4">
       <h2 className="text-[20px] text-black font-bold">Overview</h2>
@@ -11,7 +12,6 @@ const StatsOverview = ({ stats, filterOptions, selectedFilter, onFilterChange })
         selectedOption={selectedFilter}
         onSelect={onFilterChange}
         buttonText="Filter"
-        buttonWidth="w-40"
       />
     </div>
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
@@ -20,6 +20,7 @@ const StatsOverview = ({ stats, filterOptions, selectedFilter, onFilterChange })
           key={index}
           title={stat.title}
           value={stat.value}
+          percentageChange={stat.percentageChange}
           icon={stat.icon}
           statusIndicator={stat.statusIndicator}
           valueClassName="text-3xl font-bold text-black"
@@ -30,4 +31,4 @@ const StatsOverview = ({ stats, filterOptions, selectedFilter, onFilterChange })
   </div>
 );
 
-export default StatsOverview;
+export default AiStatsOverview;
