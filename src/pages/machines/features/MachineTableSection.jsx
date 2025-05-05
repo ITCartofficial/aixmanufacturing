@@ -195,12 +195,14 @@ const MachineTableSection = () => {
               selectedOption={selectedPlant}
               onSelect={setSelectedPlant}
               buttonText="Plants"
+              buttonWidth="w-44"
             />
             <Dropdown
               options={utilizationOptions}
               selectedOption={selectedUtilization}
               onSelect={setSelectedUtilization}
               buttonText="Utilization %\"
+              buttonWidth="w-40"
             />
           </div>
         </div>
