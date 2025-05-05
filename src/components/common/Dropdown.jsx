@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { FiChevronDown } from 'react-icons/fi';
+import React, { useState, useRef, useEffect } from "react";
+import { FiChevronDown } from "react-icons/fi";
 
 const Dropdown = ({ options, selectedOption, onSelect, buttonText, buttonWidth = "w-auto" }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,11 +15,11 @@ const Dropdown = ({ options, selectedOption, onSelect, buttonText, buttonWidth =
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    
+    document.addEventListener("mousedown", handleClickOutside);
+
     // Cleanup
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 

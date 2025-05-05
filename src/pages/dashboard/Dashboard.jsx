@@ -8,13 +8,14 @@ import AiInsidesDash from "./features/AiInsidesDash";
 import AlertNotiDash from "./features/AlertNotiDash";
 import TitleBar from "../../components/common/TitleBar";
 import { aiTable, tasks } from "../../lib/DashboardData";
+import { stats } from "@/lib/DashboardData.js";
 
 const Dashboard = () => {
   return (
     <>
       <TitleBar title={"Hello Admin,"} Desc="Welcome to AiXManufacturing" fillBtn={"Export"} />
 
-      <OverviewDash />
+      <OverviewDash matrics={stats} />
       <TrendGraphDash />
 
       <div className="gap-4 grid grid-cols xl:grid-cols-10 w-full">
@@ -28,7 +29,7 @@ const Dashboard = () => {
       </div>
 
       <div className="grid grid-cols-1 xl:grid-cols-10 gap-4 items-stretch">
-        <AiInsidesDash tableData={aiTable} />
+        <AiInsidesDash tableData={aiTable} row={3} />
         <AlertNotiDash />
       </div>
     </>

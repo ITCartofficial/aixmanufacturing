@@ -33,7 +33,7 @@ const Inventory = () => {
         </div>
         <Container
             className="col-span-7 h-full"
-            label=" AI Predictive Low Stock Alert"
+            label="AI Predictive Low Stock Alert"
             dropDown={true}
             opt={{label: "View all", url: "/units"}}>
             <LowStocksTable />
