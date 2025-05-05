@@ -104,3 +104,4 @@ const PredictionMaintenanceChart = () => {
 };
 
 export default PredictionMaintenanceChart;
+

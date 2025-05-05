@@ -172,7 +172,7 @@ const AiInsights = () => {
       <div className="grid grid-cols-10 gap-6">
         <div className="col-span-5 w-full h-max bg-white border rounded-[10px] p-6">
           <h2 className="text-[20px] text-black font-bold mb-4">
-            Finance AI Insights & Suggestions
+          AI Predictive Maintenance
           </h2>
           <PredictiveMaintenanceTable />
         </div>
