@@ -2,24 +2,7 @@ import React, { useState } from "react";
 import Container from "@/components/common/Container";
 import Dropdown from "@/components/common/Dropdown";
 
-const LaborAnalyticsFilter = () => {
-  const plantOptions = [
-    "All",
-    "Orion Precision Works",
-    "Titan Foundry",
-    "Nova Steel Works",
-    "Stellar CastTech",
-  ];
-  const departmentOptions = ["All", "On Duty", "Leave", "Scheduled", "Out"];
-  const roleOptions = [
-    "All",
-    "Operator",
-    "Technician",
-    "Supervisor",
-    "Inspector",
-  ];
-  const shiftOptions = ["All", "Morning", "Evening", "Night"];
-
+const FilterOverview = ({ filter }) => {
   const [currentPlant, setCurrentPlant] = useState("All");
   const [currentDepartment, setCurrentDepartment] = useState("All");
   const [currentRole, setCurrentRole] = useState("All");
@@ -31,41 +14,41 @@ const LaborAnalyticsFilter = () => {
         <div className="flex flex-col gap-2">
           <label className="text-base font-semibold">Plants</label>
           <Dropdown
-            options={plantOptions}
+            options={filter.plantOptions}
             selectedOption={currentPlant}
             onSelect={setCurrentPlant}
             buttonText={"All"}
-            className="w-[140px] justify-between px-[8px]"
+            className="min-w-[140px] justify-between px-[8px]"
           />
         </div>
         <div className="flex flex-col gap-2">
           <label className="text-base font-semibold">Departments</label>
           <Dropdown
-            options={departmentOptions}
+            options={filter.departmentOptions}
             selectedOption={currentDepartment}
             onSelect={setCurrentDepartment}
             buttonText={"All"}
-            className="w-[140px] justify-between px-[8px]"
+            className="min-w-[140px] justify-between px-[8px]"
           />
         </div>
         <div className="flex flex-col gap-2">
           <label className="text-base font-semibold">Role</label>
           <Dropdown
-            options={roleOptions}
+            options={filter.roleOptions}
             selectedOption={currentRole}
             onSelect={setCurrentRole}
             buttonText={"All"}
-            className="w-[140px] justify-between px-[8px]"
+            className="min-w-[140px] justify-between px-[8px]"
           />
         </div>
         <div className="flex flex-col gap-2">
           <label className="text-base font-semibold">Shift</label>
           <Dropdown
-            options={shiftOptions}
+            options={filter.shiftOptions}
             selectedOption={currentShift}
             onSelect={setCurrentShift}
             buttonText={"All"}
-            className="w-[140px] justify-between px-[8px]"
+            className="min-w-[140px] justify-between px-[8px]"
           />
         </div>
       </div>
@@ -73,4 +56,4 @@ const LaborAnalyticsFilter = () => {
   );
 };
 
-export default LaborAnalyticsFilter;
+export default FilterOverview;
