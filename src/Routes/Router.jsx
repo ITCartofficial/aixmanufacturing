@@ -23,6 +23,7 @@ const Router = () => {
       <Route path="/inventory" element={<Inventory />} />
       <Route path="/machines/:machineId/:slug" element={<MachineDetails />} />
       <Route path="/labor/analytics" element={<LaborAnalytics />} />
+      <Route path="/ai-insights" element={<AiInsights />} />
     </Routes>
   );
 };
