@@ -14,7 +14,7 @@ const Sidebar = ({ sidebar }) => {
     { to: "/plants", icon: <FaIndustry />, label: "Plants" },
     { to: "/machines", icon: <GiCargoCrane />, label: "Machines" },
     { to: "/labor", icon: <MdEngineering />, label: "Labour" },
-    // { to: "/task-hub", icon: <MdTask />, label: "Task Hub" },
+    { to: "/task-hub", icon: <MdTask />, label: "Task Hub" },
     { to: "/inventory", icon: <IoCube />, label: "Inventory" },
     { to: "/finance", icon: <FaBusinessTime />, label: "Finance" },
     { to: "/ai-insights", icon: <RiBardFill />, label: "AI Insights" },

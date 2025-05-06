@@ -10,6 +10,7 @@ import LaborAnalytics from "@/pages/labor/subpage/LaborAnalytics";
 import Inventory from '@/pages/inventory/Inventory'
 import AiInsights from '@/pages/ai-insights/AiInsights'
 import Finance from "@/pages/finance/Finance";
+import TaskHub from "../pages/task-hub/TaskHub";
 
 const Router = () => {
   return (
@@ -23,6 +24,7 @@ const Router = () => {
       <Route path="/inventory" element={<Inventory />} />
       <Route path="/machines/:machineId/:slug" element={<MachineDetails />} />
       <Route path="/labor/analytics" element={<LaborAnalytics />} />
+      <Route path="/task-hub" element={<TaskHub />} />
       <Route path="/ai-insights" element={<AiInsights />} />
     </Routes>
   );
