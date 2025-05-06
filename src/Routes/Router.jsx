@@ -5,7 +5,7 @@ import Plants from "@/pages/plants/Plants";
 import Machines from "@/pages/machines/Machines";
 import PlantsDetails from "@/pages/plants/subpage/PlantDetails";
 import MachineDetails from "@/pages/machines/subpage/MachineDetails";
-import Labor from "@/pages/labor/labor";
+import Labor from "@/pages/labor/Labor";
 import LaborAnalytics from "@/pages/labor/subpage/LaborAnalytics";
 import Inventory from '@/pages/inventory/Inventory'
 import AiInsights from '@/pages/ai-insights/AiInsights'
