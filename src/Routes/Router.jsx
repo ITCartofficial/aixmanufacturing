@@ -10,7 +10,7 @@ import LaborAnalytics from "@/pages/labor/subpage/LaborAnalytics";
 import Inventory from '@/pages/inventory/Inventory'
 import AiInsights from '@/pages/ai-insights/AiInsights'
 import Finance from "@/pages/finance/Finance";
-import TaskHub from "../pages/task-hub/TaskHub";
+import TaskHub from "@/pages/task-hub/TaskHub";
 
 const Router = () => {
   return (
