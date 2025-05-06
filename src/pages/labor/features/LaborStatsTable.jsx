@@ -171,14 +171,14 @@ const LaborStatsTable = ({ tableData = [] }) => {
       </td>
       <td className="p-3">
         <div className="flex space-x-2">
-          <Link
+          {/* <Link
             to={`/labor/${labor.id}/${textToSlug(
               getUserDetails(labor.user).fullName
             )}`}
             className="text-[#3B82F6]"
           >
             <FiEye className="h-5 w-5" />
-          </Link>
+          </Link> */}
           <button className="text-black">
             <MdModeEdit className="h-5 w-5" />
           </button>

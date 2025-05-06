@@ -18,8 +18,8 @@ const Sidebar = ({ sidebar }) => {
     { to: "/inventory", icon: <IoCube />, label: "Inventory" },
     { to: "/finance", icon: <FaBusinessTime />, label: "Finance" },
     { to: "/ai-insights", icon: <RiBardFill />, label: "AI Insights" },
-    { to: "/access", icon: <FaUserCog />, label: "Access" },
-    { to: "/settings", icon: <IoSettings />, label: "Setting" },
+    // { to: "/access", icon: <FaUserCog />, label: "Access" },
+    // { to: "/settings", icon: <IoSettings />, label: "Setting" },
   ];
 
   return (
@@ -37,10 +37,10 @@ const Sidebar = ({ sidebar }) => {
           </Link>
         ))}
 
-        <li className="text-[16px] mt-16 flex gap-3 items-center font-semibold text-[#4B4B4B] cursor-pointer hover:text-[#ffffff] hover:bg-[#5D60EF] py-3 px-3 rounded-[10px]">
+        {/* <li className="text-[16px] mt-16 flex gap-3 items-center font-semibold text-[#4B4B4B] cursor-pointer hover:text-[#ffffff] hover:bg-[#5D60EF] py-3 px-3 rounded-[10px]">
           <MdLogout className="text-[20px]" />
           <span className="text-[16px] font-semibold">Logout</span>
-        </li>
+        </li> */}
       </ul>
     </div>
   );
